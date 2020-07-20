@@ -1,0 +1,9 @@
+<image
+class="onekit-image {{Class}}"
+style="{{Style}}"
+src="{{src}}"
+bindload="image_load"
+binderror="image_error"
+>
+<slot></slot>
+</image>

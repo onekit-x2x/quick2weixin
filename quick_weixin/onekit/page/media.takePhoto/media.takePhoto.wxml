@@ -1,0 +1,9 @@
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
+<view
+style=""></view>
+<button wx:if="{{option.type==0}}" type="primary" bindtap="takePhoto">拍照</button>
+<view wx:if="{{option.type==1}}">
+<button type="primary" bindtap="startRecord">开始录制</button>
+<button type="primary" bindtap="stopRecord">停止录制</button>
+</view>
+<image mode="widthFix" src="{{src}}"></image>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "onekit-select":"/onekit/ui/select/select",
+    "onekit-option":"/onekit/ui/option/option"
+  }
+}

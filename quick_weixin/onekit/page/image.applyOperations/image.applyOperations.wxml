@@ -1,0 +1,6 @@
+<!--utils/image-applyOperations/image-applyOperations.wxml-->
+<canvas 
+type = "2d"
+id = "myCanvas"
+style="width:{{canvas_width}}px;height:{{canvas_height}}px;display:none;" 
+></canvas>

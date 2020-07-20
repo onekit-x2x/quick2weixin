@@ -1,0 +1,3 @@
+<onekit-image class="onekit_image" src="{{src}}"
+bindcomplete="onImageComplete" binderror="onerror">
+</onekit-image>

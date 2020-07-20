@@ -1,0 +1,49 @@
+<onekit-div Class="doc-page">
+	<onekit-div Class="page-title-wrap">
+		<onekit-text Class="page-title">{{componentName}}</onekit-text>
+	</onekit-div>
+
+	<onekit-div Class="item-container">
+		<onekit-div Class="item-content">
+			<onekit-text Class="item-title">10%（默认：颜色#33b4ff, 高度32px）</onekit-text>
+			<onekit-progress Class="progerss" percent="10"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content">
+			<onekit-text Class="item-title">20%</onekit-text>
+			<onekit-progress Class="progerss" Style="color: #09ba07;stroke-width: 10px;" percent="20"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content">
+			<onekit-text Class="item-title">40%</onekit-text>
+			<onekit-progress Class="progerss" Style="color: #0faeff;stroke-width: 10px;" percent="40"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content">
+			<onekit-text Class="item-title">60%</onekit-text>
+			<onekit-progress Class="progerss" Style="color: #A020F0;stroke-width: 10px;" percent="60"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content">
+			<onekit-text Class="item-title">80%</onekit-text>
+			<onekit-progress Class="progerss" Style="color: #f76160;stroke-width: 10px;" percent="80"></onekit-progress>
+		</onekit-div>
+
+		<onekit-div Class="item-content-circular">
+			<onekit-text Class="item-title">默认：宽度高度32px</onekit-text>
+			<onekit-progress Class="circular circular_0" Style="color: #09ba07;" type="circular"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content-circular">
+			<onekit-text Class="item-title">高度40px</onekit-text>
+			<onekit-progress Class="circular circular-1" Style="color: #09ba07;" type="circular"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content-circular">
+			<onekit-text Class="item-title">高度60px</onekit-text>
+			<onekit-progress Class="circular circular-2" Style="color: #0faeff;" type="circular"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content-circular">
+			<onekit-text Class="item-title">高度80px</onekit-text>
+			<onekit-progress Class="circular circular-3" Style="color: #A020F0;" type="circular"></onekit-progress>
+		</onekit-div>
+		<onekit-div Class="item-content-circular">
+			<onekit-text Class="item-title">高度100px</onekit-text>
+			<onekit-progress Class="circular circular-4" Style="color: #f76160;" type="circular"></onekit-progress>
+		</onekit-div>
+	</onekit-div>
+</onekit-div>

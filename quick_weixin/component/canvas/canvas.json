@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "onekit-canvas":"/onekit/ui/canvas/canvas",
+    "onekit-div":"/onekit/ui/div/div",
+    "onekit-text":"/onekit/ui/text/text"
+  }
+}

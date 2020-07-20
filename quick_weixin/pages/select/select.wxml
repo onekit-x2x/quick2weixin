@@ -1,0 +1,3 @@
+<onekit-select Style="width:100px;height:30px;" bindchange="changeOption">
+          <onekit-option wx:for="{{items}}" wx:key="key" value="{{item.key}}">{{item.name}}</onekit-option>
+        </onekit-select>

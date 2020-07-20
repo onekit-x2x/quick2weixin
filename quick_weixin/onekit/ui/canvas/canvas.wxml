@@ -1,0 +1,9 @@
+<!--onekit/ui/canvas/canvas.wxml-->
+<canvas
+class="onekit-canvas {{Class}}"
+style="display:block !important;{{Style}}"
+height="{{height}}"
+width="{{width}}"
+cavnas-id="{{id}}"
+>
+</canvas>

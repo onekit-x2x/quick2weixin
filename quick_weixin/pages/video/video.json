@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "video",
+  "usingComponents": {
+      "onekit-camera": "/onekit/ui/camera/camera",
+      "onekit-video": "/onekit/ui/video/video"
+  }
+
+}

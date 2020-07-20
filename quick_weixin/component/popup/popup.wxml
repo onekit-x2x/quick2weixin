@@ -1,0 +1,58 @@
+<!--component/onekit-onekit-popup/onekit-onekit-popup.wxml-->
+<onekit-div Class="doc-page">
+    <onekit-div Class="page-title-wrap">
+      <onekit-text Class="page-title">{{componentName}}</onekit-text>
+    </onekit-div>
+    <onekit-div Class="item-container">
+      <onekit-div Class="item-container-wrap">
+        <onekit-div Class="item-container-wrap-inner">
+          <onekit-div Class="item-container-wrap-inner-item" id="popup1">
+            <onekit-text Class="item-container-wrap-inner-item-center">位置1</onekit-text>
+          </onekit-div>
+          <onekit-div Class="item-container-wrap-inner-item" id="popup2">
+            <onekit-text Class="item-container-wrap-inner-item-center">位置2</onekit-text>
+          </onekit-div>
+          <onekit-div Class="item-container-wrap-inner-item" id="popup3">
+            <onekit-text Class="item-container-wrap-inner-item-center">位置3</onekit-text>
+          </onekit-div>
+        </onekit-div>
+        <onekit-div Class="item-container-wrap-inner-item" style="width:100%;" id="popup4">
+          <onekit-text Class="item-container-wrap-inner-item-center">位置4</onekit-text>
+        </onekit-div>
+        <onekit-div Class="item-container-wrap-inner">
+          <onekit-div Class="item-container-wrap-inner-item" id="popup5" >
+            <onekit-text Class="item-container-wrap-inner-item-center">位置5</onekit-text>
+          </onekit-div>
+          <onekit-div Class="item-container-wrap-inner-item" id="popup6">
+            <onekit-text Class="item-container-wrap-inner-item-center">位置6</onekit-text>
+          </onekit-div>
+          <onekit-div Class="item-container-wrap-inner-item" id="popup7">
+            <onekit-text Class="item-container-wrap-inner-item-center">位置7</onekit-text>
+          </onekit-div>
+        </onekit-div>
+        
+
+        <onekit-popup target="popup1" placement="{{currentDire}}" >
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+        <onekit-popup target="popup2" placement="{{currentDire}}">
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+        <onekit-popup target="popup3" placement="{{currentDire}}">
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+        <onekit-popup target="popup4" placement="{{currentDire}}" style="mask-color:#ff0000">
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+        <onekit-popup target="popup5" placement="{{currentDire}}">
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+        <onekit-popup target="popup6" placement="{{currentDire}}">
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+        <onekit-popup target="popup7" placement="{{currentDire}}">
+          <onekit-text Class="item-container-poptext">popup测试</onekit-text>
+        </onekit-popup>
+      </onekit-div>
+    </onekit-div>
+  </onekit-div>

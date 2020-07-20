@@ -1,0 +1,20 @@
+<video 
+class="onekit-video {{Class}}"
+style="{{Style}}"
+src="{{src}}"
+autoplay="{{autoplay}}"
+poster="{{poster}}"
+controls="{{controls}}"
+muted="{{muted}}"
+direction="{{orientation}}"
+title="{{title}}"
+
+bindplay="video_start"
+bindpause="video_pause"
+bindended="video_finish"
+bindfullscreenchange="video_fullscreenchange"
+binderror="video_error"
+
+>
+<slot/>
+</video>

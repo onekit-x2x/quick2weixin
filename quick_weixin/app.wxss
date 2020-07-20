@@ -1,0 +1,4 @@
+@import '/onekit/onekit.wxss';
+page {
+  background: #fff;
+}

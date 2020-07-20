@@ -1,0 +1,58 @@
+@import '/common/css/common.wxss';
+.item-container {
+  margin-bottom: 50px;
+  margin-right: 60px;
+  margin-left: 60px;
+  flex-direction: column;
+}
+
+.swiper-container {
+  flex-direction: column;
+}
+
+.swiper {
+  flex-direction: column;
+  height: 250px;
+  border: 2rpx solid red;
+}
+
+.item-content_title {
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.item_left {
+  padding: 20px;
+}
+
+.switch {
+  height: 50px;
+  width: 320px;
+}
+
+.slider {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.item {
+  height: 250px;
+  text-align: center;
+  color: #ffffff;
+  border: 3rpx solid yellow;
+  width: 100%;
+}
+
+.color-1 {
+  background-color: #09ba07;
+}
+
+.color-2 {
+  background-color: #f76160;
+}
+
+.color-3 {
+  background-color: #0faeff;
+}

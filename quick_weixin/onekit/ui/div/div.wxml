@@ -1,0 +1,10 @@
+<view
+class="onekit-div {{Class}}"
+style="{{Style}}"
+disabled="{{disabled}}"
+aria-label=""
+aria-unfocusable="{{}}"
+forcedark ="true"
+>
+<slot></slot>
+</view>

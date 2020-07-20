@@ -1,0 +1,8 @@
+<onekit-div Class="doc-page">
+	<onekit-rating Class="rating-bg1" bindchange="onstarStatus" numstars="3" rating="1" stepsize="0.5" indicator="false" 
+	star-background="background:url(/component/rating/star/star-1-1.png)"
+	 star-secondary="background:url(/component/rating/star/star-1-2.png)" 
+	 star-foreground="background:url(/component/rating/star/star-1-3.png)">
+
+	</onekit-rating>
+</onekit-div>

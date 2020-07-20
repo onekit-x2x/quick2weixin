@@ -1,0 +1,6 @@
+<scroll-view
+class="onekit-stack {{Class}}"
+style="{{Style}}"
+>
+<slot/>
+</scroll-view>

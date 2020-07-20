@@ -1,0 +1,6 @@
+<onekit-div Class="content">
+      <onekit-text>canvas绘制时钟</onekit-text>
+      <onekit-canvas id="canvas1"></onekit-canvas>
+      <onekit-image show="{{imageUrl}}" src="{{imageUrl}}"></onekit-image>
+      
+    </onekit-div>

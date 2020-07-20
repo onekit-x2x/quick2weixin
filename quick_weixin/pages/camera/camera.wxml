@@ -1,0 +1,30 @@
+
+  <onekit-div Class="doc-page">
+    <onekit-div Class="page-title-wrap">
+      <onekit-text Class="page-title">{{componentName}}</onekit-text>
+    </onekit-div>
+
+    <onekit-div Class="container">
+      <onekit-camera id="camera" Class="camera" deviceposition="{{deviceposition}}" flash="{{flash}}" binderror="handlerError"></onekit-camera>
+
+      <input type="button" value="拍照" Class="btn" onclick="takePhoto"></input>
+
+      <onekit-div Class="item-content">
+        <onekit-text>当前设置图片质量：{{photoQuality}}</onekit-text>
+        <input type="button" value="切换图片质量" Class="btn" onclick="switchQuality"></input>
+      </onekit-div>
+
+      <onekit-div Class="item-content">
+        <onekit-text>{{deviceposition}}</onekit-text>
+        <input type="button" value="切换摄像头" Class="btn" onclick="switchCamera"></input>
+      </onekit-div>
+
+      <onekit-div Class="item-content column">
+        <onekit-text Class="item-content-title">{{flashText}}</onekit-text>
+        <input type="button" value="切换闪关灯" Class="btn" onclick="switchFlash"></input>
+      </onekit-div>
+
+      <image src="{{pictureUrl}}" Class="picture"></image>
+    </onekit-div>
+  </onekit-div>
+

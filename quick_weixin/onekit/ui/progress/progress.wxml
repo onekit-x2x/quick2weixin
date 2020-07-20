@@ -1,0 +1,7 @@
+<progress
+class="onekit-progress {{Class}}"
+style="{{Style}}"
+percent="{{percent}}"
+type="{{type}}"
+>
+</progress>

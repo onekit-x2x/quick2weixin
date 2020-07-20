@@ -1,0 +1,11 @@
+<onekit-div Class="doc-page">
+    <onekit-div Class="page-title-wrap">
+      <onekit-text Class="page-title ">{{componentName}}</onekit-text>
+    </onekit-div>
+
+    <onekit-div Class="item-container">
+      <onekit-text Class="item-hint">type=html</onekit-text>
+      <onekit-text Class="item-hint">html类型的富文本的value,最外层必须用开发文档中html支持的块级元素包裹起来</onekit-text>
+      <onekit-rich-text type="html" Class="rich-text" nodes="{{content}}"></onekit-rich-text>
+    </onekit-div>
+  </onekit-div>

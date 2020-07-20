@@ -1,0 +1,81 @@
+@import '/common/css/common.wxss';
+
+.img-layout-header {
+  padding: 20rpx;
+  border-bottom-width: 1rpx;
+  border-bottom-color: #808080;
+}
+
+.item-container {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  flex-direction: column;
+}
+
+.item-title {
+  padding-left: 30rpx;
+  padding-bottom: 20rpx;
+  color: #aaaaaa;
+}
+
+.item-content {
+  height: 200rpx;
+  justify-content: center;
+}
+
+.image {
+  width: 240rpx;
+  height: 160rpx;
+  object-fit: contain;
+  border: 2rpx solid #ff0000;
+}
+
+.item-content-with-height {
+  height: 250rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-content-without-height {
+  justify-content: center;
+  align-items: center;
+}
+
+.fixed-size-wh {
+  width: 750rpx;
+  height: 250rpx;
+}
+
+.fixed-size-wh2 {
+  width: 250rpx;
+  height: 750rpx;
+}
+
+.fixed-size-h {
+  height: 160rpx;
+}
+
+.circle {
+  border-radius: 80rpx;
+}
+
+.input-button {
+  flex: 1;
+  padding: 10rpx 30rpx;
+  margin: 0rpx 30rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: #0faeff;
+}
+
+.input-text {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0rpx 30rpx;
+  margin: 30rpx;
+  border-top-width: 1rpx;
+  border-bottom-width: 1rpx;
+  border-color: #999999;
+  font-size: 30rpx;
+  background-color: #ffffff;
+}

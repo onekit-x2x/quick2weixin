@@ -1,0 +1,8 @@
+ <onekit-div Class="doc-page">
+    <onekit-div Class="page-title-wrap">
+      <text class="page-title">{{componentName}}</text>
+    </onekit-div>
+    <onekit-a href="https://www.quickapp.cn/">链接示例</onekit-a>
+    <onekit-a href="http://www.baidu.com">链接示例</onekit-a>
+    
+  </onekit-div>

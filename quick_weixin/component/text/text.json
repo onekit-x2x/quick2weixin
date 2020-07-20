@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "onekit-a": "/onekit/ui/a/a",
+    "onekit-camera": "/onekit/ui/camera/camera",
+    "onekit-canvas": "/onekit/ui/canvas/canvas",
+    "onekit-custommarker": "/onekit/ui/custommarker/custommarker",
+    "onekit-div": "/onekit/ui/div/div",
+    "onekit-image": "/onekit/ui/image/image",
+    "onekit-input": "/onekit/ui/input/input",
+    "onekit-label": "/onekit/ui/label/label",
+    "onekit-refresh": "/onekit/ui/refresh/refresh",
+    "onekit-rich-text": "/onekit/ui/rich-text/rich-text",
+    "onekit-web": "/onekit/ui/web/web"
+  }
+}

@@ -1,0 +1,108 @@
+ <onekit-div Class="onekit-root doc-page">
+ 	<onekit-div Class="page-title-wrap">
+ 		<onekit-text Class="page-title">{{componentName}}</onekit-text>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">flex-direction: row;</onekit-text>
+ 		<onekit-div Style="flex-direction: row;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">flex-direction: row-reverse;</onekit-text>
+ 		<onekit-div Style="flex-direction: row-reverse;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">flex-direction: column;</onekit-text>
+ 		<onekit-div Style="flex-direction: column; align-items: flex-start;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">flex-direction: column-reverse;</onekit-text>
+ 		<onekit-div Style="flex-direction: column-reverse; align-items: flex-start;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">justify-content: flex-end;</onekit-text>
+ 		<onekit-div Style="flex-direction: row; justify-content: flex-end;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">justify-content: space-around;</onekit-text>
+ 		<onekit-div Style="flex-direction: row; justify-content: space-around;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">align-items: center;</onekit-text>
+ 		<onekit-div Style="flex-direction: column; align-items: center;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">align-self: flex-end;</onekit-text>
+ 		<onekit-div Style="flex-direction: column; align-items: center;">
+ 			<onekit-text Class="item color-1">1</onekit-text>
+ 			<onekit-text Class="item color-2" Style="align-self: flex-end;">2</onekit-text>
+ 			<onekit-text Class="item color-3">3</onekit-text>
+ 		</onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text>background-image 加载网络图片【https】：png格式</onekit-text>
+ 		<onekit-div Class="bg-png"></onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text>background-image 加载网络图片【https】：webp格式</onekit-text>
+ 		<onekit-div Class="bg-webp"></onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text>background-image 加载网络图片【http】：gif格式</onekit-text>
+ 		<onekit-div Class="bg-gif"></onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text>background-image 加载网络图片【https】：jpg格式</onekit-text>
+ 		<onekit-div Class="bg-jpg"></onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text>background-image 加载错误的网络图片地址：加载错误，显示空白</onekit-text>
+ 		<onekit-div Class="bg-load-error"></onekit-div>
+ 	</onekit-div>
+
+ 	<onekit-div Class="item-container">
+ 		<onekit-text Class="item-title">请触摸，滑动，长按，以下区域，查看事件类型</onekit-text>
+ 		<onekit-text>当前事件类型：{{state}}</onekit-text>
+ 		<onekit-div Class="touch-region" onTouchStart="getEventType" onclick="getEventType" onlongpress="getEventType" ontouchmove="getEventType" ontouchend="getEventType"></onekit-div>
+ 	</onekit-div>
+ </onekit-div>

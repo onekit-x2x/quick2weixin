@@ -1,0 +1,6 @@
+<text
+class="onekit-text {{Class}}"
+style="{{Style}}"
+>
+<slot></slot>
+</text>

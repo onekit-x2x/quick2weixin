@@ -1,0 +1,4 @@
+
+<button bindtap="showToast" >显示浮窗</button>
+<button bindtap="showDialog" >显示对话框</button>
+<button bindtap="showContextMenu" >显示上下文菜单</button>

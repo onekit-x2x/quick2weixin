@@ -1,0 +1,11 @@
+<camera
+class="onekit-camera {{Class}}"
+style="{{Style}}"
+device-position="{{deviceposition}}"
+flash="{{flash}}"
+
+binderror="camera_error"
+>
+
+
+</camera>
