@@ -1,16 +1,8 @@
 {
 
     "pages": [
-        "component/canvas/canvas",
-        "component/popup/popup",
-        "pages/select/select",
-        "component/progress/progress",
-        "component/image/image",
-        "component/list/list",
-        "component/swiper/swiper",
-        "component/rich-text/rich-text",
-        "component/div/div",
-        "component/text/text"
+        "pages/camera/camera"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",
