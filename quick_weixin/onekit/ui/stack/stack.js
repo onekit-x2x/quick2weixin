@@ -1,7 +1,7 @@
 // onekit/ui/stack/stack.js
 Component({
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
   },
   properties: {
     Class:String,

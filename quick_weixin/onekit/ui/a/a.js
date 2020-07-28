@@ -1,7 +1,7 @@
 import router from "../../../onekit/api/system/router"
 Component({
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
   },
   properties: {
     Style:String,

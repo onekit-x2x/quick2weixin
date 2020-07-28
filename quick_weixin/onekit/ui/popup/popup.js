@@ -1,8 +1,7 @@
 // onekit/ui/popup/popup.js
 Component({
     options: {
-        styleIsolation: 'apply-shared'
-      },
+      virtualHost: true      },
     /**
      * 组件的属性列表
      */

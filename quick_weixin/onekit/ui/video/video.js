@@ -1,7 +1,6 @@
 Component({
    options: {
-     styleIsolation: 'apply-shared'
-   },
+    virtualHost: true   },
       properties: {
           src: {
               type: String, 

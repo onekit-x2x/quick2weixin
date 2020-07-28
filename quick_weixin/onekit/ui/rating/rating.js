@@ -1,7 +1,7 @@
 // onekit/ui/rating/rating.js
 Component({
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
   },
   properties: {
     Style: String,
