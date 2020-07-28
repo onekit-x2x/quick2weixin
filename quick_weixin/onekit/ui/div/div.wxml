@@ -1,6 +1,6 @@
 <view
 class="onekit-div {{Class}}"
-style="{{Style}}"
+style="background-repeat: no-repeat;background-size: 100% 100%;{{Style}}"
 id="{{Id}}"
 disabled="{{disabled}}"
 aria-label=""
