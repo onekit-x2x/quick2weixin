@@ -3,6 +3,9 @@ Component({
       virtualHost: true
     },
       properties: {
+         Style:{type:String,value:""},
+         Class:{type:String,value:""},
+         Id:{type:String,value:""},
          devicePosition:{
           type:String,
           value:'back',

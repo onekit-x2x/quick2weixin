@@ -3,7 +3,10 @@ Component({
     virtualHost: true
   },
   properties:{
-    value:String
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
+    value:{type:String,value:""}
   },
   methods:{
   option_tap(e){

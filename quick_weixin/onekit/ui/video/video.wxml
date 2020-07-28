@@ -1,6 +1,7 @@
 <video 
 class="onekit-video {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
 src="{{src}}"
 autoplay="{{autoplay}}"
 poster="{{poster}}"

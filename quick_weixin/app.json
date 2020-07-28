@@ -1,7 +1,7 @@
 {
 
     "pages": [
-        "pages/camera/camera"
+        "pages/index/index"
         
     ],
     "window": {

@@ -4,8 +4,9 @@ Component({
     virtualHost: true
   },
   properties: {
-    Style:String,
-    Class:String,
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
     href:{
       type:String,
       value:''

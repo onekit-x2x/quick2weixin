@@ -1,6 +1,7 @@
 <view
 class="onekit-rating {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
 >
   <view wx:for="{{values}}" wx:key="item" style="background-size:{{width}}px {{height}}px !important;display:inline-block;width:{{width}}px;height:{{height}}px;{{starBackground}}" 
   bindtap="rating_tap" data-index="{{index}}">

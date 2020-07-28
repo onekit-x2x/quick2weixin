@@ -1,6 +1,7 @@
 <view
 class="onekit-popup {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
 target="{{target}}"
 >
 <slot/>

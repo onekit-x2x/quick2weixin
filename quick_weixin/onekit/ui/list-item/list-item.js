@@ -112,8 +112,9 @@ Component({
       type:String,
       value:""
     },
-    Style:String,
-    Class:String
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
   },
 
   /**

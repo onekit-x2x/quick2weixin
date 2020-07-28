@@ -1,6 +1,7 @@
 <view
 class="onekit-div {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
 disabled="{{disabled}}"
 aria-label=""
 aria-unfocusable="{{}}"

@@ -2,6 +2,7 @@
 <canvas
 class="onekit-canvas {{Class}}"
 style="display:block !important;{{Style}}"
+id="{{Id}}"
 height="{{height}}"
 width="{{width}}"
 cavnas-id="{{id}}"
