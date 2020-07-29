@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "onekit-picker": "/onekit/ui/picker/picker"
+  }
+}

@@ -1,0 +1,53 @@
+<view  class="page">
+  <view  class="page-section">
+    <view  class="page-section-title">Checkbox</view>
+    <view  class="page-section-demo">
+      <checkbox-group >
+        <view >
+          <onekit-label >
+            <checkbox  value="AngularJS"></checkbox>
+            <text > AngularJS</text>
+          </onekit-label>
+        </view>
+        <view >
+          <onekit-label >
+            <checkbox  value="React"></checkbox>
+            <text > React</text>
+          </onekit-label>
+        </view>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <view  class="page-section">
+    <view  class="page-section-title">Radio</view>
+    <view  class="page-section-demo">
+      <radio-group >
+        <view >
+          <radio  id="AngularJS" value="AngularJS"></radio>
+          <onekit-label  for="AngularJS">AngularJS</onekit-label>
+        </view>
+        <view >
+          <radio  id="React" value="React"></radio>
+          <onekit-label  for="React">React</onekit-label>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <view  class="page-section">
+    <view  class="page-section-title">label中有多个 Checkbox ，点击后只选中一个</view>
+    <view  class="page-section-demo">
+      <onekit-label >
+        <checkbox >选中我</checkbox>
+        <checkbox >选不中</checkbox>
+        <checkbox >选不中</checkbox>
+        <checkbox >选不中</checkbox>
+        <view >
+          <text >Click Me</text>
+        </view>
+      </onekit-label>
+    </view>
+  </view>
+</view>
+
