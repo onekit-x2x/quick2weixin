@@ -5,6 +5,7 @@ Component({
    */
   behaviors: ['wx://form-field'],
   options: {
+    virtualHost: true
    
   },
   properties: {
@@ -14,18 +15,8 @@ Component({
     Id:{type:String,value:""},
     value:{type:String},
     type:{type:String,value:"text"},
-    password:{type:Boolean,value:false},
     placeholder:{type:String,value:""},
-    placeholderStyle :{type:String,value:""},
-    placeholderClass :{type:String,value:""},
-    disabled :{type:Boolean,value:false},
     maxlength :{type:Number,value:"140"},
-    focus :{type:Boolean,value:false},
-    confirmType :{type:String,value:"done"},
-    onfirmHold :{type:Boolean,value:false},
-    cursor :{type:Number},
-    selectionStart:{type:Number,value:-1},
-    selectionEnd :{type:Number,value:-1},
   },
 
   /**

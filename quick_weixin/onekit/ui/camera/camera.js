@@ -1,6 +1,6 @@
 Component({
    options: {
-      virtualHost: true
+    virtualHost: true
     },
       properties: {
          Style:{type:String,value:""},

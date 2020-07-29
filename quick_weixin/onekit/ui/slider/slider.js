@@ -5,6 +5,7 @@ Component({
    */
   behaviors: ['wx://form-field-group'],
   options: {
+    virtualHost: true
   },
   properties: {
     Class:{type:String,value:""},
@@ -13,14 +14,8 @@ Component({
     min:{type:String,value:0},
     max:{type:Number,value:100},
     step:{type:Number,value:1},
-    disabled:{type:Boolean,value:false},
     value:{type:Number,value:0},
-    showValue:{type:Boolean,value:false},
-    activeColor:{type:String,value:"#108ee9"},
-    backgroundColor:{type:String,value:"#ddd"},
-    handleSize:{type:Number,value:22},
-    handleColor:{type:String,value:"#fff"},
-    name:{type:String,value:''}
+    blockColor :{type:String,value:""},
   },
 
   /**
@@ -37,8 +32,6 @@ Component({
     slider_change(e){
       this.triggerEvent("Change",{})
     },
-    slider_changing(e){
-      this.triggerEvent("Changing",{})
-    }
+  
   }
 })

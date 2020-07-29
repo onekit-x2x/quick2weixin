@@ -5,6 +5,7 @@ Component({
    */
   behaviors: ['wx://form-field-group'],
   options: {
+    virtualHost: true
   },
   
   properties: {
@@ -12,9 +13,6 @@ Component({
     Style:{type:String,value:""},
     Id:{type:String,value:""},
     checked:{type:Boolean,value:false},
-    disabled:{type:Boolean,value:false},
-    color:{type:String,value:''},
-    name:{type:String,value:''}
   },
 
   /**

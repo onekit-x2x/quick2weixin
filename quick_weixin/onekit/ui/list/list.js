@@ -169,6 +169,7 @@ var transformRpx = __webpack_require__(0).transformRpx;
 
 Component({
   options: {
+    virtualHost: true,
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
   relations: {

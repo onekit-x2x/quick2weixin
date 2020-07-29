@@ -5,24 +5,16 @@ Component({
    */
   behaviors: ['wx://form-field'],
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
+
   },
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
     Id:{type:String,value:""},
-    value:{type:String},
-    name:{type:String},
     placeholder:{type:String,value:""},
-    placeholderStyle :{type:String,value:""},
-    placeholderClass :{type:String,value:""},
-    disabled :{type:Boolean,value:false},
     maxlength :{type:Number,value:"140"},
-    focus :{type:Boolean,value:false},
-    autoHeight:{type:Boolean,value:false},
     
-    showCount:{type:Boolean,value:true},
-    controlled:{type:Boolean,value:false}
   },
 
   /**

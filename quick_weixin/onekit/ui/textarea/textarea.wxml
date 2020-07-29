@@ -2,16 +2,8 @@
 class="onekit-input {{Class}}"
 style="{{Style}}"
 id="{{Id}}"
-name="{{name}}"
-value="{{value}}"
 placeholder="{{placeholder}}"
-placeholder-style="{{placeholderStyle}}"
-placeholder-class="{{placeholderClass}}"
-disabled="{{disabled}}"
 maxlength="{{maxlength}}"
-focus="{{focus}}"
-auto-height="{{autoHeight}}"
 
-show-count="{{showCount}}"
-controlled="{{controlled}}"
+
 ></textarea>

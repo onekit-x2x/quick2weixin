@@ -1,7 +1,7 @@
 // onekit/ui/canvas/canvas.js
 Component({
     options: {
-      virtualHost: true      },
+    virtualHost: true     },
     /**
      * 组件的属性列表
      */
