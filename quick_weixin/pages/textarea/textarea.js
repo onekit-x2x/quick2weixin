@@ -21,9 +21,5 @@ Page({
   bindTextAreaBlur(e) {
     console.log(e.detail.value);
   },
-  // bindFormSubmit(e) {
-  //   my.alert({
-  //     content: e.detail.value.textarea,
-  //   });
-  // },
+
 });

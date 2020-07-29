@@ -13,7 +13,7 @@
   <view  class="page-section">
     <view  class="page-section-title">自适应高度</view>
     <view  class="page-section-demo">
-      <onekit-textarea  bindblur="bindTextAreaBlur" auto-height placeholder="Please input something"></onekit-textarea>
+      <onekit-textarea  bindblur="bindTextAreaBlur"  placeholder="Please input something"></onekit-textarea>
     </view>
   </view>
 
