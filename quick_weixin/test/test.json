@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "onekit-tabs":"/onekit/ui/tabs/tabs",
+    "onekit-tab-bar":"/onekit/ui/tab-bar/tab-bar",
+    "onekit-tab-content":"/onekit/ui/tab-content/tab-content"
+  }
+}

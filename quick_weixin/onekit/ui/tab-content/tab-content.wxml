@@ -1,0 +1,3 @@
+<view class="onekit-tab-content {{Class}}" style="{{Style}}">
+<slot/>
+</view>

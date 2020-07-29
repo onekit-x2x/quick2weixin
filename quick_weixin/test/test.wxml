@@ -1,0 +1,29 @@
+  <div class="doc-page">
+    <onekit-tabs>
+      <onekit-tab-content Class="group-container">
+        <div class="group-content" wx:key="item" wx:for="{{tabItemList}}" wx:for-item="tabItem">
+          <div class="introduce">
+            <text class="introduce-detail">{{dataMap[tabItem].desc}}</text>
+          </div>
+
+          <div class="item-container" wx:key="item" wx:for="{{dataMap[tabItem].groupList}}" wx:for-item="group">
+            <div class="item-title">
+              <text class="item-title-detail {{selectedIdxMap[tabItem] === index ? 'selected-text': ''}}" onclick="selectConFn(tabItem, index)">{{group.name}}</text>
+            </div>
+            <div class="item-content {{selectedIdxMap[tabItem] === index ? 'selected-group': ''}}">
+              <block wx:key="item" wx:for="{{group.caseList}}" wx:for-item="case">
+                <div class="item-li" onclick="routePath(case.path, {})">
+                  <text class="item-li-detail">{{case.name}}</text>
+                  <image class="item_arrow_img" src="arrow-right.png"></image>
+                </div>
+              </block>
+            </div>
+          </div>
+        </div>
+      </onekit-tab-content>
+
+      <onekit-tab-bar Class="footer-container">
+        <text class="tab-text" wx:key="item" wx:for-item="$item" wx:for="{{tabItemList}}">{{dataMap[$item].name}}</text>
+      </onekit-tab-bar>
+    </onekit-tabs>
+  </div>
