@@ -1,11 +1,5 @@
 {
   "pages": [
-    "pages/picker/picker",
-    "pages/textarea/textarea",
-    "pages/switch/switch",
-    "pages/slider/slider",
-    "pages/label/label",
-    "pages/input/input",
     "test/test"
   ],
   "window": {
