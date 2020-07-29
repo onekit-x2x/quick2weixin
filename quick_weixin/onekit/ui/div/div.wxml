@@ -6,6 +6,7 @@ disabled="{{disabled}}"
 aria-label=""
 aria-unfocusable="{{}}"
 forcedark ="true"
+bindtap="view_tap"
 >
 <slot></slot>
 </view>

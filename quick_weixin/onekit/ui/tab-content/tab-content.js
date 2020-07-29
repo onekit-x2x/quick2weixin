@@ -1,10 +1,12 @@
 // onekit/ui/tab-content/tab-content.js
 Component({
   options: {
-    virtualHost: true
+    virtualHost: true,
+    multipleSlots: true
   },
   properties: {
-    Class:String,
-    Style:String,
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    count:Number
   }
 })

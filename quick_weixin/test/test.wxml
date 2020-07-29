@@ -1,29 +1,32 @@
-  <div class="doc-page">
+  <onekit-div Class="doc-page">
     <onekit-tabs>
-      <onekit-tab-content Class="group-container">
-        <div class="group-content" wx:key="item" wx:for="{{tabItemList}}" wx:for-item="tabItem">
-          <div class="introduce">
-            <text class="introduce-detail">{{dataMap[tabItem].desc}}</text>
-          </div>
+      <onekit-tab-content count="4" Class="group-container">
+        <block  wx:key="tabItem" wx:for="{{tabItemList}}" wx:for-item="tabItem">
+        <onekit-div slot="onekit-tab-{{index}}" Class="group-content">
+          <onekit-div Class="introduce">
+            <onekit-text Class="introduce-detail">{{dataMap[tabItem].desc}}</onekit-text>
+          </onekit-div>
 
-          <div class="item-container" wx:key="item" wx:for="{{dataMap[tabItem].groupList}}" wx:for-item="group">
-            <div class="item-title">
-              <text class="item-title-detail {{selectedIdxMap[tabItem] === index ? 'selected-text': ''}}" onclick="selectConFn(tabItem, index)">{{group.name}}</text>
-            </div>
-            <div class="item-content {{selectedIdxMap[tabItem] === index ? 'selected-group': ''}}">
-              <block wx:key="item" wx:for="{{group.caseList}}" wx:for-item="case">
-                <div class="item-li" onclick="routePath(case.path, {})">
-                  <text class="item-li-detail">{{case.name}}</text>
-                  <image class="item_arrow_img" src="arrow-right.png"></image>
-                </div>
+          <onekit-div Class="item-container" wx:key="group" wx:for="{{dataMap[tabItem].groupList}}" wx:for-item="group">
+            <onekit-div Class="item-title">
+              <onekit-text Class="item-title-detail {{selectedIdxMap[tabItem] === index ? 'selected-text': ''}}" data-tabItem="{{tabItem}}"
+              data-index="index" bindclick="selectConFn">{{group.name}}</onekit-text>
+            </onekit-div>
+            <onekit-div Class="item-content {{selectedIdxMap[tabItem] === index ? 'selected-group': ''}}">
+              <block wx:key="case" wx:for="{{group.caseList}}" wx:for-item="case">
+                <onekit-div Class="item-li" data-case_path="{{case.path}}" bindtap="routePath">
+                  <onekit-text Class="item-li-detail">{{case.name}}</onekit-text>
+                  <image Class="item_arrow_img" src="arrow-right.png"></image>
+                </onekit-div>
               </block>
-            </div>
-          </div>
-        </div>
+            </onekit-div>
+          </onekit-div>
+        </onekit-div>
+        </block>
       </onekit-tab-content>
 
       <onekit-tab-bar Class="footer-container">
-        <text class="tab-text" wx:key="item" wx:for-item="$item" wx:for="{{tabItemList}}">{{dataMap[$item].name}}</text>
+        <onekit-text  Class="tab-text" wx:key="item" wx:for-item="$item" wx:for="{{tabItemList}}">{{dataMap[$item].name}}</onekit-text>
       </onekit-tab-bar>
     </onekit-tabs>
-  </div>
+  </onekit-div>

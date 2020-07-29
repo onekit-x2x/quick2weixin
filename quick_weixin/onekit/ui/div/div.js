@@ -22,9 +22,8 @@ Component({
    */
   methods: {
     // 自定义方法
-    view_tap: function (res) {
-      //console.log(res)
-      this.triggerEvent('click')
-    },
+    view_tap: function (e) {
+      this.triggerEvent("tap",{}, { bubbles: true, composed: true });
+    }
   }
 })

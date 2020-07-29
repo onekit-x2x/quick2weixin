@@ -14,16 +14,17 @@ OnekitPage({
     selectedIdxMap:{}
   },
   onInit() {
-    // 初始化tabItemList
-    this.data.tabItemList = [].concat(Object.keys(this.data.dataMap))
+    this.$set("tabItemList", [].concat(Object.keys(this.data.dataMap)));
     this.data.tabItemList.forEach(tabItem => {
       this.$set(`selectedIdxMap.${tabItem}`, -1)
     })
   },
-  selectConFn (tabItem, index) {
+  selectConFn (e){//(tabItem, index) {
+    console.log("selectConFn",e);
     this.data.selectedIdxMap[tabItem] = this.data.selectedIdxMap[tabItem] === index ? -1 : index
   },
-  routePath (path, params) {
+  routePath(e){//} (path, params) {
+    console.log("routePath",e);
     router.push({ uri: path, params: params })
   }
 })

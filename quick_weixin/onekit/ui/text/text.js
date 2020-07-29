@@ -23,6 +23,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    text_tap(e){
+      console.log("xxxx0",e)
+      this.triggerEvent("click",{}, { bubbles: true, composed: true });
+    }
   }
 })
