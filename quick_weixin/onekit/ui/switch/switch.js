@@ -1,16 +1,18 @@
-// onekit/ui/label/label.js
+// onekit/ui/switch/switch.js
 Component({
   /**
    * 组件的属性列表
    */
+  behaviors: ['wx://form-field-group'],
   options: {
     virtualHost: true
   },
+  
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
     Id:{type:String,value:""},
-    "for":{type:String,value:""}
+    checked:{type:Boolean,value:false},
   },
 
   /**
@@ -24,6 +26,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    switch_change(e) {
+      this.triggerEvent("Change", {})
+    }
   }
 })

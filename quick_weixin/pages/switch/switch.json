@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "onekit-switch": "/onekit/ui/switch/switch"
+  }
+}

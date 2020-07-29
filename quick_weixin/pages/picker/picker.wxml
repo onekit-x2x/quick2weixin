@@ -1,0 +1,21 @@
+<view  class="page">
+  <view  class="page-description">选择器</view>
+  <view  class="page-section">
+    <onekit-picker  bindChange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view  class="row">
+        <view  class="row-title">地区选择器</view>
+        <view  class="row-extra">当前选择：{{array[index]}}</view>
+
+      </view>
+    </onekit-picker>
+  </view>
+
+  <view  class="page-section">
+    <onekit-picker  bindChange="bindObjPickerChange" value="{{arrIndex}}" range="{{objectArray}}" range-key="name">
+      <view  class="row">
+        <view  class="row-title">ObjectArray</view>
+        <view  class="row-extra">当前选择：{{objectArray[arrIndex].name}}</view>
+      </view>
+    </onekit-picker>
+  </view>
+</view>

@@ -1,13 +1,9 @@
-<input
+<textarea
 class="onekit-input {{Class}}"
 style="{{Style}}"
 id="{{Id}}"
-type="{{type}}"
-name="{{name}}"
-value="{{value}}"
 placeholder="{{placeholder}}"
 maxlength="{{maxlength}}"
 
 
-bindinput="onChange"
-></input>
+></textarea>

@@ -1,0 +1,15 @@
+<slider
+class="onekit-slider {{Class}}"
+style="{{Style}}"
+id="{{Id}}"
+min="{{min}}"
+max="{{max}}"
+step="{{step}}"
+block-color="{{blockColor}}"
+value="{{value}}"
+
+
+>
+<slot></slot>
+</slider>
+  

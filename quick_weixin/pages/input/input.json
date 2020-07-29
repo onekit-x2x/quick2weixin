@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "onekit-input": "/onekit/ui/input/input"
+  }
+}

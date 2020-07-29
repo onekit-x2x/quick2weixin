@@ -1,2 +1,8 @@
-<!--onekit/ui/label/label.wxml-->
-<text>onekit/ui/label/label.wxml</text>
+<label
+class="onekit-label {{Class}}"
+style="{{Style}}"
+id="{{Id}}"
+for="{{for}}"
+>
+<slot></slot>
+</label>
