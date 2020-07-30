@@ -1,1 +1,3 @@
-/* onekit/ui/tab-bar/tab-bar.wxss */
+.onekit-tab-bar>view,.onekit-tab-bar>text{
+  flex-grow:1;
+}

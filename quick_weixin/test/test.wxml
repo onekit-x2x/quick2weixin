@@ -26,7 +26,7 @@
       </onekit-tab-content>
 
       <onekit-tab-bar Class="footer-container">
-        <onekit-text  Class="tab-text" wx:key="item" wx:for-item="$item" wx:for="{{tabItemList}}">{{dataMap[$item].name}}</onekit-text>
+        <onekit-text  Class="tab-text {{}}" wx:key="item" wx:for-item="$item" wx:for="{{tabItemList}}">{{dataMap[$item].name}}</onekit-text>
       </onekit-tab-bar>
     </onekit-tabs>
   </onekit-div>
