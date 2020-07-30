@@ -5,6 +5,7 @@ Component({
    */
   properties: {
     src:{type:String,value:""},
+    Id:{type:String,value:""},
 
   },
 
