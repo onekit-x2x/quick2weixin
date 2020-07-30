@@ -1,9 +1,9 @@
 <textarea
-class="onekit-input {{Class}}"
+class="onekit-textarea {{Class}}"
 style="{{Style}}"
 id="{{Id}}"
 placeholder="{{placeholder}}"
 maxlength="{{maxlength}}"
 
 
-></textarea>
+><slot/></textarea>

@@ -325,7 +325,7 @@ page>.onekit-div {
     margin: 0;
     padding: 0;
     min-width: 0;
-    width: auto;
+    /* width: auto; */
     white-space: normal;
     pointer-events: auto;
 }
@@ -468,14 +468,14 @@ page>.onekit-div {
     box-sizing: border-box;
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
-    width: auto;
+   /* width: auto;*/
     white-space: normal;
     pointer-events: auto;
 }
 .onekit-textarea {
     font-size: 4.27vw;
     background-color: inherit;
-    
+  
 }
 /* .onekit-video */
 .onekit-video {

@@ -6,7 +6,6 @@ Component({
   behaviors: ['wx://form-field'],
   options: {
     virtualHost: true
-
   },
   properties: {
     Class:{type:String,value:""},
@@ -27,6 +26,7 @@ Component({
   /**
    * 组件的方法列表
    */
+ 
   methods: {
 
   }
