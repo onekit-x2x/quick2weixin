@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "onekit-textarea": "/onekit/ui/textarea/textarea"
+    "onekit-textarea": "/onekit/ui/textarea/textarea",
+    "onekit-input": "/onekit/ui/input/input"
   }
 }

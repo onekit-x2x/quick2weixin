@@ -1,28 +1,29 @@
-.date-radio{
-  padding: 26rpx ;
-}
-.date-radio label + label{
-  margin-left: 20rpx ;
-}
-.row{
-  display: flex ;
-  align-items: center ;
-  padding: 0 30rpx ;
-}
-.row-title{
-  flex: 1 ;
-  padding-top: 28rpx ;
-  padding-bottom: 28rpx ;
-  font-size: 34rpx ;
-  color: #000 ;
-}
-.row-extra{
-  flex-basis: initial ;
-  font-size: 32rpx ;
-  color: #888 ;
-}
-.row-arrow{
-  width: 32rpx ;
-  height: 32rpx ;
-  margin-left: 16rpx ;
-}
+@import '../../common/css/common.wxss';
+
+  .item-container {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .item-title {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom-width: 1px;
+    border-color: #bbbbbb;
+    color: #aaaaaa;
+  }
+  .item-content {
+    background-color: #ffffff;
+    border-bottom-width: 1px;
+    border-color: #bbbbbb;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .picker {
+    flex: 1;
+  }
+  .label {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 100px;
+  }

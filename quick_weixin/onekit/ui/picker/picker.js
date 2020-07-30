@@ -12,9 +12,11 @@ Component({
     Id:{type:String,value:""},
     title:{type:String},
     range:{type:Array},
-    rangeKey:{type:String},
     value:{type:Number,value:0},
-    disabled:{type:Boolean,value:Boolean}
+    selected:{type:String,value:""},
+ 
+    start:{type:String,value:"1970-1-1"},
+    end:{type:String,value:"2100-12-31"},
   },
 
   /**

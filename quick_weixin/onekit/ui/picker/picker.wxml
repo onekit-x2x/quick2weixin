@@ -2,12 +2,15 @@
 class="onekit-picker {{Class}}"
 style="{{Style}}"
 id="{{Id}}"
+selected="{{selected}}"
+type="{{type}}"
+start="{{start}}"
+end="{{end}}"
 header-text="{{title}}"
 range="{{range}}"
-range-key="{{rangeKey}}"
 value="{{value}}"
-disabled="{{disabled}}"
-bindchange="{{piker_change}}"
+bindchange="piker_change"
+bindcancel="piker_change"
 >
 <slot>
 </slot>

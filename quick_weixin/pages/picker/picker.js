@@ -1,39 +1,38 @@
 // import my from "../../../onekit/my"
 Page({
   data: {
-    array: ['中国', '美国', '巴西', '日本'],
-    objectArray: [
-      {
-        id: 0,
-        name: '美国',
-      },
-      {
-        id: 1,
-        name: '中国',
-      },
-      {
-        id: 2,
-        name: '巴西',
-      },
-      {
-        id: 3,
-        name: '日本',
-      },
-    ],
-    arrIndex: 0,
-    index: 0
+    componentName: 'picker',
+  list: ['中国', '美国', '日本', '韩国'],
+  country: '中国',
+  time: '',
+  date: ''
   },
-  bindPickerChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value);
-    this.setData({
-      index: e.detail.value,
-    });
+  onLoad () {
+    const date = new Date()
+    const Y = date.getFullYear()
+    const M = date.getMonth() + 1
+    const D = date.getDate()
+    const H = date.getHours()
+    const m = date.getMinutes()
+    this.date = Y + '-' + M + '-' + D
+    this.time = H + ':' + m
+    // this.$page.setTitleBar({text: 'Picker'})
   },
-  bindObjPickerChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value);
-    this.setData({
-      arrIndex: e.detail.value,
-    });
+  getCountry (e) {
+    this.country = e.newValue
   },
+  getTime (e) {
+    this.time = e.hour + ':' + e.minute
+  },
+  getDate (e) {
+    this.date = e.year + '-' + (e.month + 1) + '-' + e.day
+  },
+  show () {
+    this.triggerEvent('picker').show()
+  }
+  
 });
+
+
+
 
