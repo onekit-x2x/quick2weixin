@@ -14,3 +14,4 @@ $RECYCLE.BIN/
 node_modules/
 quick_weixin/project.config.json
 quick_weixin/project.config.json
+quick_weixin/app.json

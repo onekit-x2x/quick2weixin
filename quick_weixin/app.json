@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/picker-view/picker-view",
+    "pages/input/input",
     "test/test"
   ],
   "window": {
