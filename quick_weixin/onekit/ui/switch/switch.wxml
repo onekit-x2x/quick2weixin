@@ -1,7 +1,7 @@
 <switch
-class="onekit-switch {{Class}}"
-style="{{Style}}"
-id="{{Id}}"
+class="onekit-switch {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
 checked="{{checked}}"
 bindchange="switch_change"
 

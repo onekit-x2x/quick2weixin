@@ -1,7 +1,7 @@
 <view
-class="onekit-div {{Class}}"
-style="background-repeat: no-repeat;background-size: 100% 100%;{{Style}}"
-id="{{Id}}"
+class="onekit-div {{onekitClass}}"
+style="background-repeat: no-repeat;background-size: 100% 100%;{{onekitStyle}}"
+id="{{onekitId}}"
 disabled="{{disabled}}"
 aria-label=""
 aria-unfocusable="{{}}"

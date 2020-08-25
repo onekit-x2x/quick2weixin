@@ -3,9 +3,9 @@ Component({
     virtualHost: true
     },
       properties: {
-         Style:{type:String,value:""},
-         Class:{type:String,value:""},
-         Id:{type:String,value:""},
+         onekitStyle:{type:String,value:""},
+         onekitClass:{type:String,value:""},
+         onekitId:{type:String,value:""},
          devicePosition:{
           type:String,
           value:'back',

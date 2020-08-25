@@ -1,7 +1,7 @@
 <textarea
-class="onekit-textarea {{Class}}"
-style="{{Style}}"
-id="{{Id}}"
+class="onekit-textarea {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
 placeholder="{{placeholder}}"
 maxlength="{{maxlength}}"
 

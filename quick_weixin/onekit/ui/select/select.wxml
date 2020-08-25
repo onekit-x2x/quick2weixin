@@ -1,5 +1,5 @@
-<view class="onekit-select {{Class}}" style="{{Style}}"
-id="{{Id}}" bindtap="select_click">
+<view class="onekit-select {{onekitClass}}" style="{{onekitStyle}}"
+id="{{onekitId}}" bindtap="select_click">
 <view>
   {{text}}<text style="float:right">▾</text>
 </view>

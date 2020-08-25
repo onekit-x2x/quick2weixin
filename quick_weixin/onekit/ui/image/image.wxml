@@ -1,7 +1,7 @@
 <image
-class="onekit-image {{Class}}"
-style="{{Style}}"
-id="{{Id}}"
+class="onekit-image {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
 src="{{src}}"
 bindload="image_load"
 binderror="image_error"

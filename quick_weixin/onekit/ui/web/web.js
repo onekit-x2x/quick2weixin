@@ -5,7 +5,7 @@ Component({
    */
   properties: {
     src:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
 
   },
 

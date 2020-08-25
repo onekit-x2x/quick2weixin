@@ -5,8 +5,8 @@ Component({
     multipleSlots: true
   },
   properties: {
-    Class:{type:String,value:""},
-    Style:{type:String,value:""},
+    onekitClass:{type:String,value:""},
+    onekitStyle:{type:String,value:""},
     scrollable:{type:Boolean,value:true},
     count:Number
   }

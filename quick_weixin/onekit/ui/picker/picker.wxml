@@ -1,7 +1,7 @@
 <picker
-class="onekit-picker {{Class}}"
-style="{{Style}}"
-id="{{Id}}"
+class="onekit-picker {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
 selected="{{selected}}"
 type="{{type}}"
 start="{{start}}"

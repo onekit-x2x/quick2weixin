@@ -1,4 +1,4 @@
-<view class="onekit-tab-content {{Class}}" style="{{Style}};">
+<view class="onekit-tab-content {{onekitClass}}" style="{{onekitStyle}};">
   <swiper style="height:100%;">
     <swiper-item wx:for="{{count}}" wx:key="item" style="{{scrollable?'overflow:scroll;':''}}">
       <slot name="onekit-tab-{{index}}"/>

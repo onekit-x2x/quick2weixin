@@ -6,9 +6,9 @@ Component({
      * 组件的属性列表
      */
     properties: {
-      Class:{type:String,value:""},
-      Style:{type:String,value:""},
-      Id:{type:String,value:""},
+      onekitClass:{type:String,value:""},
+      onekitStyle:{type:String,value:""},
+      onekitId:{type:String,value:""},
       target:{type:String,value:""},
 
     },

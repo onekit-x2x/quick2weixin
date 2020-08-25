@@ -206,9 +206,9 @@ Component({
     virtualHost: true
   },
   properties: {
-    Class:{type:String,value:""},
-    Style:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitClass:{type:String,value:""},
+    onekitStyle:{type:String,value:""},
+    onekitId:{type:String,value:""},
     scrollpage:{
       type:Boolean,
       value:false
