@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import WebSocket from '../WebSocket'
+import WebSocket from './api/WebSocket'
 
 module.exports = {
   create(quick_object) {

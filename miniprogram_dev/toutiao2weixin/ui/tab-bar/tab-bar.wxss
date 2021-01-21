@@ -1,3 +1,0 @@
-.onekit-tab-bar>view,.onekit-tab-bar>text{
-  flex-grow:1;
-}

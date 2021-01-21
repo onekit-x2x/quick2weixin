@@ -41,15 +41,8 @@ module.exports = {
       }
     }
     wx_object.fail = function (wx_res) {
-<<<<<<< HEAD:src/api/system/file.js
-      for (const wx_res_key in wx_res) {
-=======
-      /*  const quick_res = {
-          fail: 202
-        } */
       for (const wx_res_key of Object.keys(wx_res)) {
         //   const wx_res_value = wx_res[wx_res_key]
->>>>>>> ce805d71c4a5e5f6a3ab48643ef0117d0c50dca0:src/@/@system.file.js
         switch (wx_res_key) {
           case 'errMsg':
             break
@@ -189,12 +182,7 @@ module.exports = {
     const quick_complete = quick_object.complete
     const quick_uri = quick_object.uri
     const quick_text = quick_object.text
-<<<<<<< HEAD:src/api/system/file.js
     const quick_encoding = quick_object.encoding || 'UTF-8'
-=======
-    const quick_encoding = quick_object.encoding || 'UTF - 8'
-    // const quick_append = quick_object.append || false
->>>>>>> ce805d71c4a5e5f6a3ab48643ef0117d0c50dca0:src/@/@system.file.js
     const wx_object = {}
     if (quick_uri) {
       wx_object.filePath = quick_uri
