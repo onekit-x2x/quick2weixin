@@ -46,5 +46,6 @@ var exists=function(src,dst,callback){
 const cwd = process.cwd()
 const from = PATH.join(cwd, "src/copy/")
 const to = PATH.join(cwd, 'miniprogram_dist/')
-console.log("----------------",from,to)
-exists(from,to,copy)
+setTimeout(()=>{
+  exists(from,to,copy)
+},1000)
