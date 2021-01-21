@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 /* eslint-disable camelcase */
 /* eslint-disable no-console */
 import OnekitApp from './OnekitApp'

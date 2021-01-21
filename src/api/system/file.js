@@ -1,3 +1,9 @@
+/* eslint-disable vars-on-top */
+/* eslint-disable no-redeclare */
+/* eslint-disable no-var */
+/* eslint-disable no-undef */
+/* eslint-disable guard-for-in */
+/* eslint-disable default-case */
 /* eslint-disable camelcase */
 /* eslint-disable no-console */
 module.exports = {
@@ -24,7 +30,7 @@ module.exports = {
     if (quick_dstUri) {
       wx_object.destPath = quick_srcUri
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)
@@ -34,11 +40,7 @@ module.exports = {
       }
     }
     wx_object.fail = function (wx_res) {
-      const quick_res = {
-        fail: 202
-      }
       for (const wx_res_key in wx_res) {
-        const wx_res_value = wx_res[wx_res_key]
         switch (wx_res_key) {
           case 'errMsg':
             break
@@ -173,8 +175,7 @@ module.exports = {
     const quick_complete = quick_object.complete
     const quick_uri = quick_object.uri
     const quick_text = quick_object.text
-    const quick_encoding = quick_object.encoding || UTF - 8
-    const quick_append = quick_object.append || false
+    const quick_encoding = quick_object.encoding || 'UTF-8'
     const wx_object = {}
     if (quick_uri) {
       wx_object.filePath = quick_uri
@@ -185,7 +186,7 @@ module.exports = {
     if (quick_encoding) {
       wx_object.encoding = quick_encoding
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)
@@ -206,15 +207,15 @@ module.exports = {
   },
   /** file.writeArrayBuffer */
 
-  writeArrayBuffer(quick_object) {
+  writeArrayBuffer() {
     return console.log('暂不支持！')
   },
   /** file.readText */
 
-  readText(quick_object) {},
+  readText() {},
   /** file.readArrayBuffer */
 
-  readArrayBuffer(quick_object) {},
+  readArrayBuffer() {},
   /** file.access */
 
   access(quick_object) {
@@ -230,7 +231,7 @@ module.exports = {
     if (quick_uri) {
       wx_object.path = quick_uri
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)
