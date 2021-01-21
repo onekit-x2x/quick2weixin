@@ -14,8 +14,9 @@ module.exports = {
     const quick_success = quick_object.success
     const quick_fail = quick_object.fail
     const quick_complete = quick_object.complete
-    var quick_srcUri = quick_object.srcUri
-    var quick_srcUri = quick_object.dstUri
+    const quick_srcUri = quick_object.srcUri
+    const quick_dstUri = quick_object.dstUri
+    quick_object = null
     // /////////////////////////
     const wx_object = {}
     if (quick_srcUri) {
@@ -24,7 +25,7 @@ module.exports = {
     if (quick_dstUri) {
       wx_object.destPath = quick_srcUri
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)
@@ -34,13 +35,15 @@ module.exports = {
       }
     }
     wx_object.fail = function (wx_res) {
-      const quick_res = {
-        fail: 202
-      }
-      for (const wx_res_key in wx_res) {
-        const wx_res_value = wx_res[wx_res_key]
+      /*  const quick_res = {
+          fail: 202
+        } */
+      for (const wx_res_key of Object.keys(wx_res)) {
+        //   const wx_res_value = wx_res[wx_res_key]
         switch (wx_res_key) {
           case 'errMsg':
+            break
+          default:
             break
         }
       }
@@ -105,6 +108,9 @@ module.exports = {
       wx_object.filePath = quick_uri
     }
     wx_object.success = function (wx_res) {
+      const lastModifiedTime = {}
+      const type = {}
+      const subFiles = {}
       const quick_res = {
         uri: wx_object.filePath,
         lastModifiedTime,
@@ -173,8 +179,8 @@ module.exports = {
     const quick_complete = quick_object.complete
     const quick_uri = quick_object.uri
     const quick_text = quick_object.text
-    const quick_encoding = quick_object.encoding || UTF - 8
-    const quick_append = quick_object.append || false
+    const quick_encoding = quick_object.encoding || 'UTF - 8'
+    // const quick_append = quick_object.append || false
     const wx_object = {}
     if (quick_uri) {
       wx_object.filePath = quick_uri
@@ -185,7 +191,7 @@ module.exports = {
     if (quick_encoding) {
       wx_object.encoding = quick_encoding
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)
@@ -206,15 +212,15 @@ module.exports = {
   },
   /** file.writeArrayBuffer */
 
-  writeArrayBuffer(quick_object) {
+  writeArrayBuffer() {
     return console.log('暂不支持！')
   },
   /** file.readText */
 
-  readText(quick_object) {},
+  readText() {},
   /** file.readArrayBuffer */
 
-  readArrayBuffer(quick_object) {},
+  readArrayBuffer() {},
   /** file.access */
 
   access(quick_object) {
@@ -230,7 +236,7 @@ module.exports = {
     if (quick_uri) {
       wx_object.path = quick_uri
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)

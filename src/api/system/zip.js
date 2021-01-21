@@ -13,8 +13,8 @@ module.exports = {
     // //////////////////////////////////
     const path = wx.env.USER_DATA_PATH
     const wx_object = {
-      zipFilePath: quick_srcUri.indexOf('internal://') == 0 ? path + quick_srcUri.substring(10) : quick_srcUri,
-      targetPath: quick_dstUri.indexOf('internal://') == 0 ? path + quick_dstUri.substring(10) : quick_dstUri,
+      zipFilePath: quick_srcUri.indexOf('internal://') === 0 ? path + quick_srcUri.substring(10) : quick_srcUri,
+      targetPath: quick_dstUri.indexOf('internal://') === 0 ? path + quick_dstUri.substring(10) : quick_dstUri,
     }
     console.log('xxxxxxxxxxx', wx_object)
     wx_object.success = function (res) {

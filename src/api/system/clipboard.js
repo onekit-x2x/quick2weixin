@@ -1,73 +1,75 @@
+/* eslint-disable camelcase */
 module.exports = {
   /*  clipboard.set/// */
   set(quick_object) {
     if (!quick_object) {
-      return;
+      return
     }
-    var quick_success = quick_object.success;
-    var quick_fail = quick_object.fail;
-    var quick_complete = quick_object.complete;
-    var quick_text=quick_object.text;
-    quick_object =null;
-    /////////////////
-      var wx_object = {};
-      if(quick_text){
-        wx_object.text = quick_text
+    const quick_success = quick_object.success
+    const quick_fail = quick_object.fail
+    const quick_complete = quick_object.complete
+    const quick_text = quick_object.text
+    quick_object = null
+    // ///////////////
+    const wx_object = {}
+    if (quick_text) {
+      wx_object.text = quick_text
+    }
+    wx_object.success = function (wx_res) {
+      const quick_res = {}
+      for (const wx_res_key of Object.keys(wx_res)) {
+        // const wx_res_value = wx_res[wx_res_key]
+        switch (wx_res_key) {
+          case 'errMsg':
+            break
+          default:
+            break
+        }
       }
-        wx_object.success = function(wx_res) {
-          var quick_res = {};
-          for (var wx_res_key in wx_res) {
-            var wx_res_value = wx_res[wx_res_key];
-            switch (wx_res_key) {
-              case "errMsg":
-                break;
-            }
-          }
-          if (quick_success) {
-            quick_success(quick_res);
-          }
-          if (quick_complete) {
-            quick_complete(quick_res);
-          }
-        };
-        wx_object.fail = function(wx_res) {
-          if (quick_fail) {
-            quick_fail(wx_res);
-          }
-          if (quick_complete) {
-            quick_complete(wx_res);
-          }
-        };
-        wx.setClipboardData(wx_object)
+      if (quick_success) {
+        quick_success(quick_res)
+      }
+      if (quick_complete) {
+        quick_complete(quick_res)
+      }
     }
+    wx_object.fail = function (wx_res) {
+      if (quick_fail) {
+        quick_fail(wx_res)
+      }
+      if (quick_complete) {
+        quick_complete(wx_res)
+      }
+    }
+    wx.setClipboardData(wx_object)
+  },
+  /* clipboard.get/// */
 
-    /* clipboard.get/// */
-    ,
   get(quick_object) {
-    var quick_success = quick_object.success;
-    var quick_fail = quick_object.fail;
-    var quick_complete = quick_object.complete;
-    quick_object =null;
-    //////////////////////////
-    var wx_object = {};
-      wx_object.success = function(wx_res) {
-        var quick_res = {};
-        quick_res.text = wx_res.data
-        if (quick_success) {
-          quick_success(quick_res);
-        }
-        if (quick_complete) {
-          quick_complete(quick_res);
-        }
-      };
-      wx_object.fail = function(wx_res) {
-        if (quick_fail) {
-          quick_fail(wx_res);
-        }
-        if (quick_complete) {
-          quick_complete(wx_res);
-        }
-      };
-      wx.getClipboardData(wx_object)
+    const quick_success = quick_object.success
+    const quick_fail = quick_object.fail
+    const quick_complete = quick_object.complete
+    quick_object = null
+    // ////////////////////////
+    const wx_object = {}
+    wx_object.success = function (wx_res) {
+      const quick_res = {}
+      quick_res.text = wx_res.data
+      if (quick_success) {
+        quick_success(quick_res)
+      }
+      if (quick_complete) {
+        quick_complete(quick_res)
+      }
+    }
+    wx_object.fail = function (wx_res) {
+      if (quick_fail) {
+        quick_fail(wx_res)
+      }
+      if (quick_complete) {
+        quick_complete(wx_res)
+      }
+    }
+    wx.getClipboardData(wx_object)
   }
 }

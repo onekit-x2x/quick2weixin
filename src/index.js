@@ -5,8 +5,6 @@ import OnekitBehavior from './OnekitBehavior'
 import OnekitComponent from './OnekitComponent'
 import OnekitPage from './OnekitPage'
 
-import object_websocket from './api/object/websocket'
-
 import service_alipay from './api/service/alipay'
 import service_share from './api/service/share'
 import service_wxaccount from './api/service/wxaccount'
@@ -46,8 +44,6 @@ export default {
   OnekitBehavior,
   OnekitComponent,
   OnekitPage,
-
-  '@object.websocket': object_websocket,
 
   '@service.alipay': service_alipay,
   '@service.share': service_share,

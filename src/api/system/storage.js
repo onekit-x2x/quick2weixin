@@ -16,7 +16,7 @@ module.exports = {
     if (quick_value) {
       wx_object.value = quick_value
     }
-    wx_object.success = function (wx_res) {
+    wx_object.success = function () {
       const quick_res = {}
       if (quick_success) {
         quick_success(quick_res)
