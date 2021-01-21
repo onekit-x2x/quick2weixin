@@ -1,9 +1,0 @@
-
-{
-  "usingComponents": {
-    "onekit-text": "/onekit/ui/text/text",
-    "onekit-list": "/onekit/ui/list/list",
-    "onekit-list-item": "/onekit/ui/list-item/list-item"
-  },
-  "navigationBarTitleText": "list"
-}

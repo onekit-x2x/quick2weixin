@@ -1,2 +1,0 @@
-<!--pages/thirdparty/wxaccount/wxaccount.wxml-->
-<button bindtap="useWXAccount">登录</button>

@@ -1,4 +1,0 @@
-<!-- <button open-type="share" >分享</button> -->
-<button  bindtap="shareImage" >图片分享</button>
-<button  bindtap="shareTitleAndImage" >图文分享</button>
-<button  bindtap="shareOther" >其它分享（纯文本分享，音频分享）</button>

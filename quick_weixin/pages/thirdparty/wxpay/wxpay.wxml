@@ -1,3 +1,0 @@
-<!--pages/thirdparty/wxpay/wxpay.wxml-->
-<button bindtap="doLogin" >登录</button>
-<button bindtap="useWxpay" >支付</button>

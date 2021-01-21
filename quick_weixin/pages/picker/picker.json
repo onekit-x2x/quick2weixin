@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "onekit-picker": "/onekit/ui/picker/picker",
-    "onekit-text": "/onekit/ui/text/text",
-    "onekit-input": "/onekit/ui/input/input"
-  }
-}

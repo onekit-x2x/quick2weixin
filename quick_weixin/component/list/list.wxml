@@ -1,9 +1,0 @@
-<onekit-list Class="list-content" bindscroll="handleScroll" bindscrolltolower="scrolltolower" id="list" bindscrolltoupper="scrolltoupper" bindscrollend="scrollend" scrollpage="{{scrollPage}}" Style="columns:{{columnsNum}}">
-	<onekit-list-item type="listItem" Class="item item-color" wx:for="{{listData}}">
-		<onekit-text Class="txt">{{item}}--{{index}}</onekit-text>
-	</onekit-list-item>
-
-	<onekit-list-item type="loadMore" Class="load-more" wx:if="{{loadMore}}" Style="column-span:{{columnsNum}}">S
-		<onekit-text>加载更多</onekit-text>
-	</onekit-list-item>
-</onekit-list>
