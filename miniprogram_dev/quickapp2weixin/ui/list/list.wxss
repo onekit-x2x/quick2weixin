@@ -1,0 +1,13 @@
+/* components/list/list.wxss */
+:host {
+    display: block;
+    width: 100%;
+  }
+.onekit-list-box{ -moz-box-orient: vertical;
+flex-direction: column;
+display: grid;
+flex: 1 1 0%;
+height: auto;
+transform: translate3d(0px, 0px, 0px);
+grid-template-columns: repeat(3, 1fr);
+ }

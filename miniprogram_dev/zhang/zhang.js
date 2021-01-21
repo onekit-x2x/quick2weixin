@@ -1,4 +1,4 @@
-import {tt,OnekitPage} from '../toutiao2weixin/index'
+import {tt,OnekitPage} from '../quickapp2weixin/index'
 const SERVER = 'https://192.168.22.172:41443'
 const API = `${SERVER}/`
 const header = { 'content-type': "application/x-www-form-urlencoded" }

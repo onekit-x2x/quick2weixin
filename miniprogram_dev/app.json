@@ -20,12 +20,12 @@
   },
   "debug": true,
   "usingComponents": {
-    "onekit-ad": "toutiao2weixin/ui/ad/ad",
-    "onekit-icon": "toutiao2weixin/ui/icon/icon",
-    "onekit-progress": "toutiao2weixin/ui/progress/progress",
-    "onekit-slider": "toutiao2weixin/ui/slider/slider",
-    "onekit-video": "toutiao2weixin/ui/video/video",
-    "onekit-view": "toutiao2weixin/ui/view/view"
+    "onekit-ad": "quickapp2weixin/ui/ad/ad",
+    "onekit-icon": "quickapp2weixin/ui/icon/icon",
+    "onekit-progress": "quickapp2weixin/ui/progress/progress",
+    "onekit-slider": "quickapp2weixin/ui/slider/slider",
+    "onekit-video": "quickapp2weixin/ui/video/video",
+    "onekit-view": "quickapp2weixin/ui/view/view"
   },
   "sitemapLocation": "sitemap.json"
 }

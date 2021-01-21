@@ -14,4 +14,4 @@ Click this link to jump to the English version of the tutorial：[Tutorial]()
 #### 开发者  
 深度自定义开发，请参考：[https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/trdparty.html](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/trdparty.html)
 #### 使用者  
-项目中使用“toutiao2weixin”，请参考：[https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html#Tips](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html#Tips)
+项目中使用“quickapp2weixin”，请参考：[https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html#Tips](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html#Tips)
