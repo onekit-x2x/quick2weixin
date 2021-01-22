@@ -3,7 +3,8 @@
     "zeng/zeng",
     "zhang/zhang",
     "wang/wang",
-    "new-tabs/new-tabs" 
+    "new-tabs/new-tabs" ,
+    "quickapp2weixin/page/router.push/ie" 
   ],
   "window": {
     "navigationBarTextStyle": "black",

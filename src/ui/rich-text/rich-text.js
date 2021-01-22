@@ -1,4 +1,4 @@
-import HTML from '../../copy/lib/HTML'
+import HTML from '../../lib/HTML'
 
 Component({
   /**

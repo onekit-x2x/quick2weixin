@@ -7,11 +7,13 @@ import OnekitBehavior from './OnekitBehavior'
 import OnekitComponent from './OnekitComponent'
 import OnekitPage from './OnekitPage'
 
+import system_router from './@system.router'
 
 export default {
   OnekitApp,
   OnekitBehavior,
   OnekitComponent,
-  OnekitPage
+  OnekitPage,
+  '@system.router': system_router,
 
 }

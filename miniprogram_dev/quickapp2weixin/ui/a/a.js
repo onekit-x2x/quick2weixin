@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,64 +92,7 @@ module.exports =
 "use strict";
 
 
-var _system = __webpack_require__(1);
-
-var _system2 = _interopRequireDefault(_system);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-Component({
-  options: {
-    virtualHost: true
-  },
-  properties: {
-    onekitClass: {
-      type: String,
-      value: ''
-    },
-    onekitStyle: {
-      type: String,
-      value: ''
-    },
-    onekitId: {
-      type: String,
-      value: ''
-    },
-    href: {
-      type: String,
-      value: ''
-    }
-  },
-  lifetimes: {
-    attached: function attached() {
-      this.setData({
-        href: this.properties.href
-      });
-      console.log(this.data);
-    },
-    detached: function detached() {
-      // 在组件实例被从页面节点树移除时执行
-    }
-  },
-  data: {},
-  methods: {
-    a_bindtap: function a_bindtap() {
-      _system2.default.push({
-        uri: this.data.href,
-        params: this.data.params
-      });
-    }
-  }
-}); /* eslint-disable no-console */
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _URL = __webpack_require__(2);
+var _URL = __webpack_require__(1);
 
 var _URL2 = _interopRequireDefault(_URL);
 
@@ -162,65 +105,135 @@ module.exports = {
       return;
     }
     var quick_uri = quick_object.uri;
-    var quick_params = quick_object.params;
-    // ///////////////
-    var wx_object = {};
+    //    const quick_params = quick_object.params
+    if (quick_uri.startsWith('/')) {
+      if (quick_uri === '/') {
+        wx.reLaunch({
+          url: quick_uri
+        });
+      } else {
+        wx.navigateTo({
+          url: quick_uri
+        });
+      }
+      return;
+    }
+
     var url = new _URL2.default(quick_uri);
-    console.log(url);
+    if (url.host === null) {
+      wx.navigateTo({
+        url: quick_uri
+      });
+      return;
+    }
+    switch (url.scheme) {
+      case 'tel':
+        wx.makePhoneCall({
+          phoneNumber: url.host
+        });
+        break;
+      case 'sms':
+        wx.showModal({
+          title: '不支持',
+          content: '微信小程序暂不支持发短信'
+        });
+        break;
+      case 'http':
+      case 'https':
+        wx.navigateTo({
+          url: '/quickapp2weixin/page/router.push/ie?url=' + encodeURI(quick_uri)
+        });
+        break;
+      case 'internal':
+        wx.showModal({
+          title: '带配置',
+          content: '微信小程序暂不支持打开文件'
+        });
+        break;
+      case 'hap':
+        switch (url.host) {
+          case 'app':
+            wx.showModal({
+              title: '带配置',
+              content: '请配置要打开的小程序'
+            });
+            break;
+          case 'settings':
+            wx.showModal({
+              title: '带配置',
+              content: '微信小程序暂不支持打开手机设置'
+            });
+            break;
+          default:
+            throw new Error(url.host);
+        }
+        // wx.showModal({
+        //   title: '不支持',
+        //   content: '微信小程序暂不支持',
+        // });
+        break;
+      default:
+        throw new Error(url.scheme);
+    }
+    // ///////////////
+    /*
+    const wx_object = {}
+    const url = new URL(quick_uri)
+    console.log(url)
     if (url.scheme) {
       switch (url.scheme) {
         case 'tel':
           wx.makePhoneCall({
-            phoneNumber: url.host
-          });
-          break;
+            phoneNumber: url.host,
+          })
+          break
         case 'sms':
           wx.showModal({
             title: '不支持',
-            content: '微信小程序暂不支持发短信'
-          });
-          break;
+            content: '微信小程序暂不支持发短信',
+          })
+          break
         case 'http':
         case 'https':
           wx.navigateTo({
-            url: '/onekit/page/router.push/ie?url=' + encodeURI(quick_uri)
-          });
-          break;
+            url: `/onekit/page/router.push/ie?url=${encodeURI(quick_uri)}`
+          })
+          break
         case 'internal':
           wx.showModal({
             title: '带配置',
-            content: '请配置要打开的App'
-          });
-          break;
+            content: '请配置要打开的App',
+          })
+          break
         case 'hap':
           switch (url.host) {
             case 'app':
               wx.showModal({
                 title: '带配置',
-                content: '请配置要打开的小程序'
-              });
-              break;
+                content: '请配置要打开的小程序',
+              })
+              break
             case 'settings':
-              break;
+              break
             default:
-              throw new Error(url.host);
+              throw new Error(url.host)
           }
           // wx.showModal({
           //   title: '不支持',
           //   content: '微信小程序暂不支持',
           // });
-          break;
+          break
         default:
-          throw new Error(url.scheme);
+          throw new Error(url.scheme)
       }
     } else {
       if (quick_params) {
-        wx_object.url = quick_uri + ('?params=' + quick_params.body);
+        wx_object.url = quick_uri + `?params=${quick_params.body}`
       } else {
-        wx_object.url = quick_uri;
+        wx_object.url = quick_uri
       }
-      wx.navigateTo(wx_object);
-    }
+      wx.navigateTo(wx_object)
+    } */
   },
 
   /** router.replace */
@@ -272,7 +285,7 @@ module.exports = {
 /* eslint-disable camelcase */
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -315,6 +328,63 @@ class URL {
   }
 }
 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _system = __webpack_require__(0);
+
+var _system2 = _interopRequireDefault(_system);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+Component({
+  options: {
+    virtualHost: true
+  },
+  properties: {
+    onekitClass: {
+      type: String,
+      value: ''
+    },
+    onekitStyle: {
+      type: String,
+      value: ''
+    },
+    onekitId: {
+      type: String,
+      value: ''
+    },
+    href: {
+      type: String,
+      value: ''
+    }
+  },
+  lifetimes: {
+    attached: function attached() {
+      this.setData({
+        href: this.properties.href
+      });
+      console.log(this.data);
+    },
+    detached: function detached() {
+      // 在组件实例被从页面节点树移除时执行
+    }
+  },
+  data: {},
+  methods: {
+    a_bindtap: function a_bindtap() {
+      _system2.default.push({
+        uri: this.data.href,
+        params: this.data.params
+      });
+    }
+  }
+}); /* eslint-disable no-console */
 
 /***/ })
 /******/ ]);

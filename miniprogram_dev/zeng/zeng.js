@@ -1,11 +1,10 @@
-import prompt from '../quickapp2weixin/@system.prompt'
+import quickapp2weixin from '../quickapp2weixin/index';const router = quickapp2weixin["@system.router"]
+
 Page({
-
-
-  onLoad: function (options) {
-    prompt.showToast({
-      message: 'hello,quickapp',
-      success:res=>{
+  onLoad: function () {
+    router.push({
+      uri: 'https://www.onekit.cn',
+      success: res=>{
           console.log(res)
       }
   })

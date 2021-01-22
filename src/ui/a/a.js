@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import router from '../../copy/@system.router'
+import router from '../../@system.router'
 
 Component({
   options: {
