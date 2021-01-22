@@ -1,0 +1,3 @@
+<view class="onekit-tab-bar {{onekitClass}}" style="{{onekitStyle}};{{mode!='scrollable'?'overflow-x:scroll;':'display:flex;'}}">
+<slot/>
+</view>

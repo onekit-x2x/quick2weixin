@@ -1,0 +1,9 @@
+<!--components/recycle-view/recycle-view.wxml-->
+<scroll-view  bindtouchstart='_beginToScroll' class="onekit-list wrap content" style="height:{{useInPage ? totalHeight + (hasBeforeSlotHeight ? beforeSlotHeight : 0) + (hasAfterSlotHeight ? afterSlotHeight : 0) : height}}px;width:{{width}}px;transform:translateZ(0);-webkit-transform:translateZ(0);" id="content" >
+ 
+    <view class="onekit-list-box" style='position:relative;width:100%;z-index:10;background: url("{{placeholderImageStr}}") repeat;height:{{totalHeight}}px;'>
+      
+        <slot></slot>
+  
+    </view>
+  </scroll-view>

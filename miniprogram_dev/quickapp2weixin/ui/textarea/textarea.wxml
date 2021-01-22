@@ -1,0 +1,9 @@
+<textarea
+class="onekit-textarea {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+placeholder="{{placeholder}}"
+maxlength="{{maxlength}}"
+
+
+><slot/></textarea>

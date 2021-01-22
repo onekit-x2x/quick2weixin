@@ -1,0 +1,12 @@
+<view
+class="onekit-div {{onekitClass}}"
+style="background-repeat: no-repeat;background-size: 100% 100%;{{onekitStyle}}"
+id="{{onekitId}}"
+disabled="{{disabled}}"
+aria-label=""
+aria-unfocusable="{{}}"
+forcedark ="true"
+bindtap="view_tap"
+>
+<slot></slot>
+</view>

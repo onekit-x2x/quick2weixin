@@ -1,10 +1,10 @@
 {
   "pages": [
-    "li/li",
+    "yang/yang",
     "zhang/zhang",
     "wang/wang",
-    "new-tabs/new-tabs",
-    "yang/yang"
+    "new-tabs/new-tabs"
+    
   ],
   "window": {
     "navigationBarTextStyle": "black",
