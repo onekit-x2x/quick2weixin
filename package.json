@@ -9,7 +9,7 @@
     "demo": "gulp demo --develop",
     "watch": "gulp watch --develop --watch",
     "build": "gulp",
-    "copy":"node tools/copy",
+    "copy": "node tools/copy",
     "dist": "npm run build & npm run copy",
     "clean-dev": "gulp clean --develop",
     "clean": "gulp clean",
