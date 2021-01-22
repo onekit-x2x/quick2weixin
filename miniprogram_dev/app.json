@@ -1,10 +1,9 @@
 {
   "pages": [
-    "yang/yang",
+    "zeng/zeng",
     "zhang/zhang",
     "wang/wang",
-    "new-tabs/new-tabs"
-    
+    "new-tabs/new-tabs" 
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -20,12 +19,35 @@
   },
   "debug": true,
   "usingComponents": {
-    "onekit-ad": "quickapp2weixin/ui/ad/ad",
-    "onekit-icon": "quickapp2weixin/ui/icon/icon",
-    "onekit-progress": "quickapp2weixin/ui/progress/progress",
-    "onekit-slider": "quickapp2weixin/ui/slider/slider",
-    "onekit-video": "quickapp2weixin/ui/video/video",
-    "onekit-view": "quickapp2weixin/ui/view/view"
+    "onekit-a": "./quickapp2weixin/ui/a/a",
+    "onekit-camera": "./quickapp2weixin/ui/camera/camera",
+    "onekit-canvas": "./quickapp2weixin/ui/canvas/canvas",
+    "onekit-custommarker": "./quickapp2weixin/ui/custommarker/custommarker",
+    "onekit-div": "./quickapp2weixin/ui/div/div",
+    "onekit-image": "./quickapp2weixin/ui/image/image",
+    "onekit-input": "./quickapp2weixin/ui/input/input",
+    "onekit-label": "./quickapp2weixin/ui/label/label",
+    "onekit-list": "./quickapp2weixin/ui/list/list",
+    "onekit-list-item": "./quickapp2weixin/ui/list-item/list-item",
+    "onekit-option": "./quickapp2weixin/ui/option/option",
+    "onekit-picker": "./quickapp2weixin/ui/picker/picker",
+    "onekit-popup": "./quickapp2weixin/ui/popup/popup",
+    "onekit-progress": "./quickapp2weixin/ui/progress/progress",
+    "onekit-rating": "./quickapp2weixin/ui/rating/rating",
+    "onekit-refresh": "./quickapp2weixin/ui/refresh/refresh",
+    "onekit-rich-text": "./quickapp2weixin/ui/rich-text/rich-text",
+    "onekit-select": "./quickapp2weixin/ui/select/select",
+    "onekit-slider": "./quickapp2weixin/ui/slider/slider",
+    "onekit-stack": "./quickapp2weixin/ui/stack/stack",
+    "onekit-swiper": "./quickapp2weixin/ui/swiper/swiper",
+    "onekit-switch": "./quickapp2weixin/ui/switch/switch",
+    "onekit-tab-bar": "./quickapp2weixin/ui/tab-bar/tab-bar",
+    "onekit-tab-content": "./quickapp2weixin/ui/tab-content/tab-content",
+    "onekit-tabs": "./quickapp2weixin/ui/tabs/tabs",
+    "onekit-text": "./quickapp2weixin/ui/text/text",
+    "onekit-textarea": "./quickapp2weixin/ui/textarea/textarea",
+    "onekit-video": "./quickapp2weixin/ui/video/video",
+    "onekit-web": "./quickapp2weixin/ui/web/web"
   },
   "sitemapLocation": "sitemap.json"
 }
