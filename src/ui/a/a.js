@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import router from '../../api/system/router'
+import router from '../../copy/@system.router'
 
 Component({
   options: {
@@ -36,7 +36,7 @@ Component({
   },
   data: {},
   methods: {
-    a_bindtap(e) {
+    a_bindtap() {
       router.push({
         uri: this.data.href,
         params: this.data.params

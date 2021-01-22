@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // onekit/ui/text.js
 Component({
   /**

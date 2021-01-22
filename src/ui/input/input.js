@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // onekit/ui/input/input.js
 Component({
   /**

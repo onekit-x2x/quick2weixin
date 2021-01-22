@@ -55,7 +55,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    piker_change(e) {
+    piker_change() {
       this.triggerEvent('Change', {})
     }
   }

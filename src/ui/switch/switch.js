@@ -38,7 +38,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    switch_change(e) {
+    switch_change() {
       this.triggerEvent('Change', {})
     }
   }

@@ -46,7 +46,7 @@ Component({
   attached() {
     const that = this
     // ///////////////////////////////
-    if (that.properties.stepsize != 1) {
+    if (that.properties.stepsize !== 1) {
       that.properties.stepsize = 0.5
     }
     const values = Array(this.properties.numstars)
@@ -77,11 +77,11 @@ Component({
         value = this.properties.stepsize
       }
       if (value > 0) {
-        for (var i = 0; i < index; i++) {
+        for (let i = 0; i < index; i++) {
           values[i] = 1
         }
-      } else if (value == 0) {
-        for (var i = index + 1; i < values.length; i++) {
+      } else if (value === 0) {
+        for (let i = index + 1; i < values.length; i++) {
           values[i] = 0
         }
       }

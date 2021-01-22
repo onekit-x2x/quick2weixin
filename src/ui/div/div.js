@@ -31,7 +31,7 @@ Component({
    */
   methods: {
     // 自定义方法
-    view_tap(e) {
+    view_tap() {
       this.triggerEvent('tap', {}, {
         bubbles: true,
         composed: true
