@@ -71,93 +71,43 @@ module.exports = {
           default:
             throw new Error(url.host)
         }
-        // wx.showModal({
-        //   title: '不支持',
-        //   content: '微信小程序暂不支持',
-        // });
+
         break
       default:
         throw new Error(url.scheme)
     }
-    // ///////////////
-    /*
-    const wx_object = {}
-    const url = new URL(quick_uri)
-    console.log(url)
-    if (url.scheme) {
-      switch (url.scheme) {
-        case 'tel':
-          wx.makePhoneCall({
-            phoneNumber: url.host,
-          })
-          break
-        case 'sms':
-          wx.showModal({
-            title: '不支持',
-            content: '微信小程序暂不支持发短信',
-          })
-          break
-        case 'http':
-        case 'https':
-          wx.navigateTo({
-            url: `/onekit/page/router.push/ie?url=${encodeURI(quick_uri)}`
-          })
-          break
-        case 'internal':
-          wx.showModal({
-            title: '带配置',
-            content: '请配置要打开的App',
-          })
-          break
-        case 'hap':
-          switch (url.host) {
-            case 'app':
-              wx.showModal({
-                title: '带配置',
-                content: '请配置要打开的小程序',
-              })
-              break
-            case 'settings':
-              break
-            default:
-              throw new Error(url.host)
-          }
-          // wx.showModal({
-          //   title: '不支持',
-          //   content: '微信小程序暂不支持',
-          // });
-          break
-        default:
-          throw new Error(url.scheme)
-      }
-    } else {
-      if (quick_params) {
-        wx_object.url = quick_uri + `?params=${quick_params.body}`
-      } else {
-        wx_object.url = quick_uri
-      }
-      wx.navigateTo(wx_object)
-    } */
   },
+
+
   /** router.replace */
 
   replace(quick_object) {
     const quick_uri = quick_object.uri
-    // ///////////////
-    const wx_object = {}
-    const url = new URL(quick_uri)
-    wx_object.url = url
-    wx.redirectTo(wx_object)
+    if (quick_uri.startsWith('/')) {
+      if (quick_uri === '/') {
+        wx.reLaunch({
+          url: quick_uri
+        })
+      } else {
+        wx.navigateTo({
+          url: quick_uri
+        })
+      }
+    }
   },
   /** router.back */
 
   back(quick_object) {
     const quick_uri = quick_object.uri
-    // ///////////////
-    const wx_object = {}
-    const url = new URL(quick_uri)
-    wx_object.url = url
-    wx.navigateBack(wx_object)
+    if (quick_uri.startsWith('/')) {
+      if (quick_uri === '/') {
+        wx.reLaunch({
+          url: quick_uri
+        })
+      } else {
+        wx.navigateBack({})
+      }
+    }
   },
   /** router.clear() */
 
