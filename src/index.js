@@ -10,6 +10,8 @@ import OnekitPage from './OnekitPage'
 import system_router from './@system.router'
 import system_configuration from './@system.configuration'
 import system_prompt from './@system.prompt'
+import system_webview from './@system.webview'
+import system_request from './@system.request'
 
 export default {
   OnekitApp,
@@ -19,5 +21,7 @@ export default {
   '@system.router': system_router,
   '@system.configuration': system_configuration,
   '@system.prompt': system_prompt,
+  '@system.webview': system_webview,
+  '@system.request': system_request,
 
 }

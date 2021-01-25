@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -198,7 +198,6 @@ module.exports = {
   /** router.back */
 
   back: function back(quick_object) {
-
     var quick_path = quick_object.path;
     if (!quick_path) {
       wx.navigateBack({});
@@ -211,7 +210,8 @@ module.exports = {
         wx.reLaunch({
           url: quick_path
         });
-
+      }
+    }
   },
 
   /** router.clear() */
@@ -286,7 +286,8 @@ class URL {
 
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
