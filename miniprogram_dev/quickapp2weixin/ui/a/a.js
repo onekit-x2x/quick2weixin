@@ -198,6 +198,7 @@ module.exports = {
   /** router.back */
 
   back: function back(quick_object) {
+
     var quick_path = quick_object.path;
     if (!quick_path) {
       wx.navigateBack({});
@@ -210,8 +211,7 @@ module.exports = {
         wx.reLaunch({
           url: quick_path
         });
-      }
-    }
+
   },
 
   /** router.clear() */
