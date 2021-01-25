@@ -1,7 +1,0 @@
-<scroll-view
-class="onekit-stack {{onekitClass}}"
-style="{{onekitStyle}}"
-id="{{onekitId}}"
->
-<slot/>
-</scroll-view>

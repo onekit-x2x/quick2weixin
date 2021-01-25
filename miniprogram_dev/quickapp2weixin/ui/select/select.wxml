@@ -1,9 +1,0 @@
-<view class="onekit-select {{onekitClass}}" style="{{onekitStyle}}"
-id="{{onekitId}}" bindtap="select_click">
-<view>
-  {{text}}<text style="float:right">▾</text>
-</view>
-<view class="onekit-select-box" wx:if="{{show}}" bindonekit_option_change="option_change">
-    <slot/>
-  </view>
-  </view>
