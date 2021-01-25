@@ -13,7 +13,7 @@ module.exports = {
     if (quick_uri.startsWith('/')) {
       if (quick_uri === '/') {
         wx.reLaunch({
-          url: quick_uri
+          url: `/quickapp2weixin/page/router.push/ie?url=${encodeURI(quick_uri)}`
         })
       } else {
         wx.navigateTo({
@@ -82,11 +82,14 @@ module.exports = {
   /** router.replace */
 
   replace(quick_object) {
+    if (!quick_object) {
+      return
+    }
     const quick_uri = quick_object.uri
     if (quick_uri.startsWith('/')) {
       if (quick_uri === '/') {
         wx.reLaunch({
-          url: quick_uri
+          url: `/quickapp2weixin/page/router.push/ie?url=${encodeURI(quick_uri)}`
         })
       } else {
         wx.navigateTo({
@@ -98,14 +101,18 @@ module.exports = {
   /** router.back */
 
   back(quick_object) {
-    const quick_uri = quick_object.uri
-    if (quick_uri.startsWith('/')) {
-      if (quick_uri === '/') {
-        wx.reLaunch({
-          url: quick_uri
+    const quick_path = quick_object.path
+    if (!quick_path) {
+      wx.navigateBack({})
+    } else if (quick_path.startsWith('/')) {
+      if (quick_path === '/') {
+        wx.navigateTo({
+          url: `/quickapp2weixin/page/router.push/ie?url=${encodeURI(quick_path)}`
         })
       } else {
-        wx.navigateBack({})
+        wx.reLaunch({
+          url: quick_path
+        })
       }
     }
   },

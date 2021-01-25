@@ -109,7 +109,7 @@ module.exports = {
     if (quick_uri.startsWith('/')) {
       if (quick_uri === '/') {
         wx.reLaunch({
-          url: quick_uri
+          url: '/quickapp2weixin/page/router.push/ie?url=' + encodeURI(quick_uri)
         });
       } else {
         wx.navigateTo({
@@ -120,7 +120,6 @@ module.exports = {
     }
 
     var url = new _URL2.default(quick_uri);
-    console.log(url);
     if (url.host === null) {
       wx.navigateTo({
         url: quick_uri
@@ -179,36 +178,40 @@ module.exports = {
   /** router.replace */
 
   replace: function replace(quick_object) {
+    if (!quick_object) {
+      return;
+    }
     var quick_uri = quick_object.uri;
     if (quick_uri.startsWith('/')) {
       if (quick_uri === '/') {
         wx.reLaunch({
-          url: quick_uri
+          url: '/quickapp2weixin/page/router.push/ie?url=' + encodeURI(quick_uri)
         });
       } else {
         wx.navigateTo({
           url: quick_uri
         });
       }
-      return;
     }
-
-    // ///////////////
-    var wx_object = {};
-    var url = new _URL2.default(quick_uri);
-    wx_object.url = url;
-    wx.redirectTo(wx_object);
   },
 
   /** router.back */
 
   back: function back(quick_object) {
-    var quick_uri = quick_object.uri;
-    // ///////////////
-    var wx_object = {};
-    var url = new _URL2.default(quick_uri);
-    wx_object.url = url;
-    wx.navigateBack(wx_object);
+    var quick_path = quick_object.path;
+    if (!quick_path) {
+      wx.navigateBack({});
+    } else if (quick_path.startsWith('/')) {
+      if (quick_path === '/') {
+        wx.navigateTo({
+          url: '/quickapp2weixin/page/router.push/ie?url=' + encodeURI(quick_path)
+        });
+      } else {
+        wx.reLaunch({
+          url: quick_path
+        });
+      }
+    }
   },
 
   /** router.clear() */
