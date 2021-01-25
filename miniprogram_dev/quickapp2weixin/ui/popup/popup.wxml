@@ -1,0 +1,8 @@
+<view
+class="onekit-popup {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+target="{{target}}"
+>
+<slot/>
+</view>

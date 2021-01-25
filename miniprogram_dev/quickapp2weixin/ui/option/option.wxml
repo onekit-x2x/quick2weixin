@@ -1,0 +1,1 @@
+<text data-value="{{value}}"  class="onekit-option {{onekitClass}}" style="{{onekitStyle}}" id="{{onekitId}}" bindtap="option_tap"><slot/></text>

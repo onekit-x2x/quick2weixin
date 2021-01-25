@@ -5,8 +5,8 @@
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "init": "git submodule init && git submodule update --init --remote && npm run dev",
-    "copy_dev":"node tools/copy_dev",
-    "copy_dist":"node tools/copy_dist",
+    "copy_dev": "node tools/copy_dev",
+    "copy_dist": "node tools/copy_dist",
     "dev": "gulp dev --develop & npm run copy_dev",
     "demo": "gulp demo --develop",
     "watch": "gulp watch --develop --watch",

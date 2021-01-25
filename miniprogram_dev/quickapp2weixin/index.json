@@ -1,0 +1,34 @@
+{
+  "usingComponents": {
+    "a": "./ui/a/a",
+    "camera": "./ui/camera/camera",
+    "canvas": "./ui/canvas/canvas",
+    "custommarker": "./ui/custommarker/custommarker",
+    "div": "./ui/div/div",
+    "image": "./ui/image/image",
+    "input": "./ui/input/input",
+    "label": "./ui/label/label",
+    "list": "./ui/list/list",
+    "list-item": "./ui/list-item/list-item",
+    "option": "./ui/option/option",
+    "picker": "./ui/picker/picker",
+    "popup": "./ui/popup/popup",
+    "progress": "./ui/progress/progress",
+    "rating": "./ui/rating/rating",
+    "refresh": "./ui/refresh/refresh",
+    "rich-text": "./ui/rich-text/rich-text",
+    "select": "./ui/select/select",
+    "slider": "./ui/slider/slider",
+    "stack": "./ui/stack/stack",
+    "swiper": "./ui/swiper/swiper",
+    "switch": "./ui/switch/switch",
+    "tab-bar": "./ui/tab-bar/tab-bar",
+    "tab-content": "./ui/tab-content/tab-content",
+    "tabs": "./ui/tabs/tabs",
+    "text": "./ui/text/text",
+    "textarea": "./ui/textarea/textarea",
+    "video": "./ui/video/video",
+    "web": "./ui/web/web"
+
+  }
+}

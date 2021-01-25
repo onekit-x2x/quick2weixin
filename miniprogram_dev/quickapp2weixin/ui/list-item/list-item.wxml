@@ -1,0 +1,4 @@
+<!--components/recycle-item/recycle-item.wxml-->
+<view class="onekit-list-item {{onekitClass}}" style="{{onekitStyle}}" id="{{onekitId}}">
+  <slot></slot>
+</view>

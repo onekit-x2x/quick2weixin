@@ -1,0 +1,13 @@
+<input
+class="onekit-input {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+type="{{type}}"
+name="{{name}}"
+value="{{value}}"
+placeholder="{{placeholder}}"
+maxlength="{{maxlength}}"
+
+
+bindinput="onChange"
+></input>
