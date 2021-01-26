@@ -5,47 +5,43 @@ const configuration = quickapp2weixin["@system.configuration"]
 const prompt = quickapp2weixin["@system.prompt"]
 const webview = quickapp2weixin["@system.webview"]
 const request = quickapp2weixin["@system.request"]
+const fetch  = quickapp2weixin["@system.fetch"]
+const websocketfactory  = quickapp2weixin["@system.websocketfactory"]
+const storage   = quickapp2weixin["@system.storage"]
+const file    = quickapp2weixin["@system.file"]
+const vibrator     = quickapp2weixin["@system.vibrator"]
 Page({
   onLoad: function () {
-    wx.chooseImage({
-      count: 0,
+    const FileSystemManager =  wx.getFileSystemManager()
+    FileSystemManager.readFile({
+      filePath:wx.env.USER_DATA_PATH,
       success:res=>{
-        request.upload({
-          url: 'https://www.onekit.cn',
-          files: [
-            {
-              uri: res.tempFilePaths[0],
-              name: 'file1',
-              filename: 'test.png'
-            }
-          ],
-          data: [
-            {
-              name: 'param1',
-              value: 'value1'
-            }
-          ],
-          success: function(data) {
-            console.log('handling success',data)
-          },
-          fail: function(data, code) {
-            console.log(`handling fail, code = ${code}`)
-          }
-        })
+        console.log(res)
+      },
+      fail: function(data) {
+        console.log(data)
+      }
+    })
+    file.mkdir({
+      uri: 'wxfile://files/dir',
+      success: function(data) {
+        console.log(data)
+      },
+      fail: function(data) {
+        console.log(data)
       }
     })
     
-    // request.download({
-    //   url: 'http://localhost/a.html',
-    //   success: function(data) {
-    //     console.log(`handling success${data.token}`,data)
-    //   },
-    //   fail: function(data, code) {
-    //     console.log(`handling fail, code = ${code}`)
-    //   }
-    // })
+        file.rmdir({
+      uri: 'wxfile://files/dir',
+      success: function(data) {
+        console.log(data.options.uri)
+      },
+      fail: function(data) {
+        console.log(data)
+      }
+    })
    
-
 
 
   }

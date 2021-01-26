@@ -58,6 +58,10 @@ module.exports = {
     const filename = quick_object.filename || quick_url.substring(quick_url.lastIndexOf('/') + 1)
     const filePath = wx.env.USER_DATA_PATH + '/' + filename
     quick_object = null
+    const wx_object = {
+      url: quick_url,
+      filePath,
+    }
     PROMISE((SUCCESS) => {
       wx.downloadFile({
         url: quick_url,
@@ -75,6 +79,8 @@ module.exports = {
         }
       })
     }, quick_success, quick_fail, quick_complete)
+    getApp().onekit_DownloadTask = wx.downloadFile(wx_object)
+    getApp().onekit_url = quick_url
   },
   /** onDownloadComplete */
 
@@ -83,15 +89,15 @@ module.exports = {
       return
     }
     const quick_success = quick_object.success
-    // const quick_fail = quick_object.fail
-    // const quick_complete = quick_object.complete
-    // const quick_token = quick_object.token
-    if (this.progress === 100) {
-      quick_success({
-        uri: this.url
+    if (getApp().onekit_DownloadTask) {
+      const DownloadTask = getApp().onekit_DownloadTask
+      DownloadTask.onProgressUpdate(wx_res => {
+        if (wx_res.progress === 100) {
+          quick_success({
+            uri: getApp().onekit_url
+          })
+        }
       })
-    } else {
-      this.callback = quick_success
     }
   }
 }

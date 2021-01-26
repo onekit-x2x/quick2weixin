@@ -12,22 +12,26 @@ export default class WebSocket {
     this.socket.send(quick_object)
   }
 
-  set onopen(quick_object) {
-    this.socket.onOpen(quick_object)
+  onopen(callback) {
+    this.socket.onOpen(callback)
   }
 
-  set onmessage(quick_object) {
-    this.socket.onMessage(quick_object)
+  onmessage(callback) {
+    this.socket.onMessage(callback)
   }
 
-  set onclose(quick_object) {
-    this.socket.onClose(function (res) {
-      res.wasClean = res.reason === 'normal closure'
-      quick_object(res)
+  onclose(callback) {
+    this.socket.onClose(function (wx_res) {
+      const quick_res = {
+        code: wx_res.code,
+        reason: wx_res.reason,
+        wasClean: 'normal closure',
+      }
+      callback(quick_res)
     })
   }
 
-  set onerror(quick_object) {
-    this.socket.onError(quick_object)
+  onerror(callback) {
+    this.socket.onError(callback)
   }
 }

@@ -86,13 +86,14 @@ module.exports =
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _URL = __webpack_require__(1);
+var _URL = __webpack_require__(2);
 
 var _URL2 = _interopRequireDefault(_URL);
 
@@ -241,7 +242,7 @@ module.exports = {
 /* eslint-disable camelcase */
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -286,14 +287,13 @@ class URL {
 
 
 /***/ }),
-/* 2 */,
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _system = __webpack_require__(0);
+var _system = __webpack_require__(1);
 
 var _system2 = _interopRequireDefault(_system);
 
