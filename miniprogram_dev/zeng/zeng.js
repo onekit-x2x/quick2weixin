@@ -13,24 +13,172 @@ const vibrator     = quickapp2weixin["@system.vibrator"]
 const barcode     = quickapp2weixin["@system.barcode"]
 const sensor     = quickapp2weixin["@system.sensor"]
 const clipboard     = quickapp2weixin["@system.clipboard"]
+const geolocation     = quickapp2weixin["@system.geolocation"]
+const network     = quickapp2weixin["@system.network"]
+const device     = quickapp2weixin["@system.device"]
+const brightness      = quickapp2weixin["@system.brightness"]
+const battery      = quickapp2weixin["@system.battery"]
+const wifi      = quickapp2weixin["@system.wifi"]
 Page({
+  // getPhoneNumber (e) {
+  //   console.log(e)
+  // },
   onLoad: function () {
-    clipboard.set({
-      text: 'text',
-      success:res=>{
-        console.log(res,'ssssss')
-      },fail:res=>{
-        console.log(res,'ssssss')
-      }
-    })
-    clipboard.get({
-      success: function(data) {
-        console.log(data)
-      },
-      fail: function(data, code) {
-        console.log(`handling fail, code = ${code}`)
-      }
-    })
+    // wx.startWifi()
+    // wx.onWifiConnected(res=>{
+    //   console.log(res)
+    // })
+    wifi.onstatechanged = function(data) {
+      console.log(data)
+    }
+    // wx.startWifi()
+    // wifi.scan({
+    //   success: function(res) {
+    //     console.log(res)
+    //   },
+    //   fail: function(data) {
+    //     console.log(data)
+    //   }
+    // })
+    // wifi.getConnectedWifi({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // wifi.onscanned = function(data) {
+    //   console.log(data)
+    //  }
+    // wx.login({
+    //   success:res=>{
+    //     console.log(res)
+    //   }
+    // })
+    // battery.getStatus({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // brightness.setValue({
+    //   value: 100,
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // brightness.getValue({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // device.getInfo({
+    //   success: function(ret) {
+    //     console.log(ret)
+    //   }
+    // })
+    // const str= "iOS 10.0.1"
+    
+    // console.log(str.split(" "))
+    // wx.getSystemInfo({
+    //   success (res) {
+    //     console.log(res)
+        
+    //   }
+    // })
+    // wx.onNetworkStatusChange(function (res) {
+    //   console.log(res.isConnected)
+    //   console.log(res.networkType)
+    // })
+    // network.subscribe({
+    //   callback: function(data) {
+    //     console.log(data)
+    //   }
+    // })
+    // network.unsubscribe()
+    // network.getType({
+    //   success: function(data) {
+    //     console.log(data)
+    //   }
+    // })
+    // geolocation.subscribe({
+    //   callback: function(data) {
+    //     console.log(
+    //       data
+    //     )
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+  
+  //  geolocation.getLocationType({
+  //     success: function(data) {
+  //       console.log(data)
+  //     },
+  //     fail: function(data) {
+  //       console.log(data)
+  //     }
+  //   })
+    // geolocation.chooseLocation({
+    //   success: function(data) {
+    //     console.log(
+    //       data
+    //     )
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`choose location fail, code = ${code}`)
+    //   },
+    //   complete: function() {
+    //     console.log(`choose location complete`)
+    //   }
+    // })
+    // geolocation.openLocation({
+    //   latitude: 22.553594050274,
+    //   longitude: 114.0586290118,
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`open location fail, code = ${code}`)
+    //   },
+    //   complete: function() {
+    //     console.log(`open location complete`)
+    //   }
+    // })
+    // geolocation.getLocation({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // clipboard.set({
+    //   text: 'text',
+    //   success:res=>{
+    //     console.log(res,'ssssss')
+    //   },fail:res=>{
+    //     console.log(res,'ssssss')
+    //   }
+    // })
+    // clipboard.get({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
     // sensor.subscribeStepCounter({
     //   callback: function(ret) {
     //     console.log(ret)

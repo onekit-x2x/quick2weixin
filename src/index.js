@@ -20,6 +20,14 @@ import system_vibrator from './@system.vibrator'
 import system_barcode from './@system.barcode'
 import system_sensor from './@system.sensor'
 import system_clipboard from './@system.clipboard'
+import system_geolocation from './@system.geolocation'
+import system_network from './@system.network'
+import system_device from './@system.device'
+import system_brightness from './@system.brightness'
+import system_battery from './@system.battery'
+import system_wifi from './@system.wifi'
+import system_record from './@system.record'
+
 
 export default {
   OnekitApp,
@@ -39,4 +47,11 @@ export default {
   '@system.barcode': system_barcode,
   '@system.sensor': system_sensor,
   '@system.clipboard': system_clipboard,
+  '@system.geolocation': system_geolocation,
+  '@system.network': system_network,
+  '@system.device': system_device,
+  '@system.brightness': system_brightness,
+  '@system.battery': system_battery,
+  '@system.wifi': system_wifi,
+  '@system.record': system_record,
 }

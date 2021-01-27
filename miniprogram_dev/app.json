@@ -6,6 +6,11 @@
     "new-tabs/new-tabs" ,
     "quickapp2weixin/page/router.push/ie" 
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "小程序拓展组件库",

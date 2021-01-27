@@ -1,6 +1,9 @@
-/* eslint-disable complexity */
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
+import PROMISE from '../node_modules/oneutil/PROMISE'
+
 module.exports = {
+  /** device.getInfo */
   getInfo(quick_object) {
     if (!quick_object) {
       return
@@ -9,90 +12,100 @@ module.exports = {
     const quick_fail = quick_object.fail
     const quick_complete = quick_object.complete
     quick_object = null
-    // /////////////////////////
-    const wx_object = {}
-    wx_object.success = function (wx_res) {
-      const quick_res = {
-        osVersionCode: 29,
-        platformVersionCode: 1062,
-        platformVersionName: '1.0.6.2',
-        product: 'OnePlus7_CH',
-        vendorOsName: 'H2OS',
-        vendorOsVersion: 'Hydrogen OS 10.0.4.GM57',
-      }
-      for (const wx_res_key of Object.keys(wx_res)) {
-        const wx_res_value = wx_res[wx_res_key]
-        switch (wx_res_key) {
-          case 'brand': // 微信
-            quick_res.brand = wx_res_value // 快应用
-            quick_res.manufacturer = wx_res_value
-            break
-          case 'language':
-            quick_res.language = wx_res_value.split('_')[0]
-            quick_res.region = wx_res_value.split('_')[1]
-            break
-          case 'safeArea':
-            break
-          case 'model':
-            quick_res.model = wx_res_value
-            break
-          case 'pixelRatio':
-            quick_res.screenDensity = wx_res_value
-            break
-          case 'platform':
-            quick_res.osType = wx_res_value
-            break
-          case 'system':
-            quick_res.osVersionName = wx_res_value.split(' ')[1]
-            break
-          case 'screenHeight':
-            quick_res.screenHeight = wx_res_value
-            break
-          case 'screenWidth':
-            quick_res.screenWidth = wx_res_value
-            break
-          case 'screenTop':
-            quick_res.statusBarHeight = wx_res_value
-            break
-          case 'windowHeight':
-            quick_res.windowHeight = wx_res_value
-            break
-          case 'windowWidth':
-            quick_res.windowWidth = wx_res_value
-            break
-          case 'SDKVersion':
-          case 'benchmarkLevel':
-          case 'bluetoothEnabled':
-          case 'cameraAuthorized':
-          case 'version':
-          case 'notificationAuthorized':
-          case 'microphoneAuthorized':
-          case 'locationEnabled':
-          case 'locationAuthorized':
-          case 'errMsg':
-          case 'deviceOrientation':
-          case 'devicePixelRatio':
-          case 'fontSizeSetting':
-            break
-          default:
-            quick_res[wx_res_key] = wx_res_value
+    PROMISE((SUCCESS) => {
+      wx.getSystemInfo({
+        success: wx_res => {
+          const quick_res = {
+            brand: wx_res.brand,
+            model: wx_res.model,
+            osVersionName: wx_res.system.split(' ')[0],
+            osVersionCode: wx_res.system.split(' ')[1],
+            pixelRatio: wx_res.pixelRatio,
+            language: wx_res.language,
+            screenWidth: wx_res.screenWidth,
+            screenHeight: wx_res.screenHeight,
+            windowWidth: wx_res.windowWidth,
+            windowHeight: wx_res.windowHeight,
+            statusBarHeight: wx_res.statusBarHeight,
+            vendorOsVersion: wx_res.version,
+            theme: wx_res.theme,
+            locationReducedAccuracy: wx_res.locationReducedAccuracy,
+            safeArea: wx_res.safeArea,
+            wifiEnabled: wx_res.wifiEnabled,
+            locationEnabled: wx_res.locationEnabled,
+            bluetoothEnabled: wx_res.bluetoothEnabled,
+            notificationSoundAuthorized: wx_res.notificationSoundAuthorized,
+            notificationBadgeAuthorized: wx_res.notificationBadgeAuthorized,
+            notificationAlertAuthorized: wx_res.notificationAlertAuthorized,
+            notificationAuthorized: wx_res.notificationAuthorized,
+            microphoneAuthorized: wx_res.microphoneAuthorized,
+            locationAuthorized: wx_res.locationAuthorized,
+            cameraAuthorized: wx_res.cameraAuthorized,
+            albumAuthorized: wx_res.albumAuthorized,
+            benchmarkLevel: wx_res.benchmarkLevel,
+            SDKVersion: wx_res.SDKVersion,
+            fontSizeSetting: wx_res.fontSizeSetting,
+            platform: wx_res.platform,
+          }
+          SUCCESS(quick_res)
         }
-      }
-      if (quick_success) {
-        quick_success(quick_res)
-      }
-      if (quick_complete) {
-        quick_complete(quick_res)
-      }
-    }
-    wx_object.fail = function (wx_res) {
-      if (quick_fail) {
-        quick_fail(wx_res)
-      }
-      if (quick_complete) {
-        quick_complete(wx_res)
-      }
-    }
-    wx.getSystemInfo(wx_object)
-  }
+      })
+    }, quick_success, quick_fail, quick_complete)
+  },
+
+  /** device.getId */
+  getId() {
+    return console.warn('getId is not support')
+  },
+
+  /** device.getDeviceId */
+  getDeviceId() {
+    return console.warn('getDeviceId is not support')
+  },
+
+  /** device.getUserId */
+  getUserId() {
+    return console.warn('getUserId is not support')
+  },
+
+  /** device.getAdvertisingId */
+  getAdvertisingId() {
+    return console.warn('getAdvertisingId is not support')
+  },
+
+  /** device.getSerial */
+  getSerial() {
+    return console.warn('getSerial is not support')
+  },
+
+  /** device.getTotalStorage */
+  getTotalStorage() {
+    return console.warn('getTotalStorage is not support')
+  },
+
+  /** device.getAvailableStorage */
+  getAvailableStorage() {
+    return console.warn('getAvailableStorage is not support')
+  },
+
+  /** device.getCpuInfo */
+  getCpuInfo() {
+    return console.warn('getCpuInfo is not support')
+  },
+
+  /** device.getOAID */
+  getOAID() {
+    return console.warn('getOAID is not support')
+  },
+
+  /** device.platform */
+  platform() {
+    return console.warn('platform is not support')
+  },
+
+  /** device.host */
+  host() {
+    return console.warn('host is not support')
+  },
+
 }
