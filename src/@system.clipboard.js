@@ -1,4 +1,6 @@
 /* eslint-disable camelcase */
+import PROMISE from '../node_modules/oneutil/PROMISE'
+
 module.exports = {
   /*  clipboard.set/// */
   set(quick_object) {
@@ -10,38 +12,17 @@ module.exports = {
     const quick_complete = quick_object.complete
     const quick_text = quick_object.text
     quick_object = null
-    // ///////////////
-    const wx_object = {}
-    if (quick_text) {
-      wx_object.text = quick_text
-    }
-    wx_object.success = function (wx_res) {
-      const quick_res = {}
-      for (const wx_res_key of Object.keys(wx_res)) {
-        // const wx_res_value = wx_res[wx_res_key]
-        switch (wx_res_key) {
-          case 'errMsg':
-            break
-          default:
-            break
+    PROMISE((SUCCESS) => {
+      wx.setClipboardData({
+        data: quick_text,
+        success: () => {
+          const quick_res = {
+            errMsg: 'set: ok'
+          }
+          SUCCESS(quick_res)
         }
-      }
-      if (quick_success) {
-        quick_success(quick_res)
-      }
-      if (quick_complete) {
-        quick_complete(quick_res)
-      }
-    }
-    wx_object.fail = function (wx_res) {
-      if (quick_fail) {
-        quick_fail(wx_res)
-      }
-      if (quick_complete) {
-        quick_complete(wx_res)
-      }
-    }
-    wx.setClipboardData(wx_object)
+      })
+    }, quick_success, quick_fail, quick_complete)
   },
   /* clipboard.get/// */
 
@@ -50,26 +31,15 @@ module.exports = {
     const quick_fail = quick_object.fail
     const quick_complete = quick_object.complete
     quick_object = null
-    // ////////////////////////
-    const wx_object = {}
-    wx_object.success = function (wx_res) {
-      const quick_res = {}
-      quick_res.text = wx_res.data
-      if (quick_success) {
-        quick_success(quick_res)
-      }
-      if (quick_complete) {
-        quick_complete(quick_res)
-      }
-    }
-    wx_object.fail = function (wx_res) {
-      if (quick_fail) {
-        quick_fail(wx_res)
-      }
-      if (quick_complete) {
-        quick_complete(wx_res)
-      }
-    }
-    wx.getClipboardData(wx_object)
+    PROMISE((SUCCESS) => {
+      wx.getClipboardData({
+        success: wx_res => {
+          const quick_res = {
+            text: wx_res.data
+          }
+          SUCCESS(quick_res)
+        }
+      })
+    }, quick_success, quick_fail, quick_complete)
   }
 }

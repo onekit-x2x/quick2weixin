@@ -5,81 +5,75 @@ module.exports = {
     if (!quick_object) {
       return
     }
-    const quick_reserved = quick_object.reserved || false
-    const quick_interval = quick_object.url || 'normal'
+    const quick_interval = quick_object.interval || 'normal'
     const quick_callback = quick_object.callback
-    // ////////////////////////
     const wx_object = {
-      reserved: quick_reserved,
-      interval: quick_interval
+      interval: quick_interval,
     }
-    wx.onAccelerometerChange(function (callback) {
-      quick_callback({
-        x: callback.x,
-        y: callback.z,
-        z: callback.y
-      })
-    })
     wx.startAccelerometer(wx_object)
+    wx.onAccelerometerChange(wx_res => {
+      const quick_res = {
+        x: wx_res.x,
+        y: wx_res.y,
+        z: wx_res.z,
+      }
+      quick_callback(quick_res)
+    })
   },
 
   /** unsubscribeAccelerometer */
   unsubscribeAccelerometer() {
-    wx.offAccelerometerChange(function callback(e) {
-      console.log(e)
-    })
+    return wx.offAccelerometerChange()
   },
   /** sensor.subscribeCompass */
   subscribeCompass(quick_object) {
     if (!quick_object) {
       return
     }
-    // const quick_reserved = quick_object.reserved || false
+    wx.startCompass()
     const quick_callback = quick_object.callback
-    // ///////////////////////
     wx.onCompassChange(function (res) {
       quick_callback({
-        direction: res.direction
+        direction: res.direction,
+        accuracy: res.accuracy
       })
     })
-    wx.startCompass({})
   },
 
   /** sensor.unsubscribeCompass() */
   unsubscribeCompass() {
-    wx.stopAccelerometer()
-    wx.offAccelerometerChange(function () {})
+    return wx.offCompassChange()
   },
 
   /** sensor.subscribeProximity */
   subscribeProximity() {
-    console.log('暂不支持！')
+    return console.warn('subscribeProximity is not support')
   },
   /** sensor.unsubscribeProximity() */
   unsubscribeProximity() {
-    console.log('暂不支持！')
+    return console.warn('unsubscribeProximity is not support')
   },
 
   /** sensor.subscribeLight */
   subscribeLight() {
-    console.log('暂不支持！')
+    return console.warn('subscribeLight is not support')
   },
 
   /** sensor.unsubscribeLight() */
   unsubscribeLight() {
-    console.log('暂不支持！')
+    return console.warn('unsubscribeLight is not support')
   },
 
   /** sensor.subscribeStepCounter */
   subscribeStepCounter(quick_object) {
-    console.log(quick_object)
     if (!quick_object) {
       return
     }
-    // const quick_reserved = quick_object.reserved
+    wx.startAccelerometer({
+      interval: 'game'
+    })
     const quick_callback = quick_object.callback
-    // const quick_fail = quick_object.fail
-    // ///////////////////////////
+
     function check(a1, a2) {
       return ((a1 > 0 && a2 < 0) || (a1 < 0 && a2 > 0))
     }
@@ -93,10 +87,8 @@ module.exports = {
     }
     let x
     let y
-    let
-      z
+    let z
     wx.onAccelerometerChange(function (res) {
-      // console.log(res);
       if (x && check(x, res.x)) {
         add()
         x = 0
@@ -113,15 +105,10 @@ module.exports = {
 
       z = res.z
     })
-    wx.startAccelerometer({
-      interval: 'game'
-    })
   },
   // ////////////////////////////
   /** sensor.unsubscribeStepCounter() */
   unsubscribeStepCounter() {
-    wx.offCompassChange(function (res) {
-      console.log(res)
-    })
+    return wx.offCompassChange()
   }
 }

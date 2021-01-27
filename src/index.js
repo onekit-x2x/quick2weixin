@@ -17,6 +17,9 @@ import system_websocketfactory from './@system.websocketfactory'
 import system_storage from './@system.storage'
 import system_file from './@system.file'
 import system_vibrator from './@system.vibrator'
+import system_barcode from './@system.barcode'
+import system_sensor from './@system.sensor'
+import system_clipboard from './@system.clipboard'
 
 export default {
   OnekitApp,
@@ -33,4 +36,7 @@ export default {
   '@system.storage': system_storage,
   '@system.file': system_file,
   '@system.vibrator': system_vibrator,
+  '@system.barcode': system_barcode,
+  '@system.sensor': system_sensor,
+  '@system.clipboard': system_clipboard,
 }
