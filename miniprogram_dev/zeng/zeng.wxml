@@ -1,3 +1,5 @@
 <!--zeng/zeng.wxml-->
 <text>zeng/zeng.wxml</text>
-<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">ssss</button>
+<!-- <camera></camera> -->
+
+

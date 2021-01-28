@@ -30,13 +30,15 @@ module.exports = {
     const quick_complete = quick_object.complete
     quick_object = null
     // const quick_cancel = quick_object.cancel
-    const CameraContext = wx.createCameraContext()
     PROMISE((SUCCESS) => {
-      CameraContext.startRecord({
+      wx.chooseVideo({
         success: wx_res => {
           const quick_res = {
-            uri: wx_res.tempVideoPath,
-            tempThumbPath: wx_res.tempThumbPath
+            uri: wx_res.tempFilePath,
+            size: wx_res.size,
+            duration: wx_res.duration,
+            height: wx_res.height,
+            width: wx_res.width,
           }
           SUCCESS(quick_res)
         }
@@ -133,8 +135,12 @@ module.exports = {
             width: file.width,
             thumbTempFilePath: file.thumbTempFilePath,
           }))
+          const quick_uris = []
+          for (const value of wx_res.tempFiles) {
+            quick_uris.push(value.tempFilePath)
+          }
           const quick_res = {
-            uris: wx_res.tempFiles,
+            uris: quick_uris,
             files: quick_files,
             type: wx_res.type
           }
@@ -210,11 +216,11 @@ module.exports = {
   },
   /** media.getRingtone */
   getRingtone() {
-    console.error('[quick2weixin] 暂不支持 media.getRingtone')
+    console.warn('getRingtone is not support')
   },
   /** setRingtone */
   setRingtone() {
-    console.error('[quick2weixin] 暂不支持 media.setRingtone')
+    console.warn('setRingtone is not support')
   }
 
 }

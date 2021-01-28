@@ -21,11 +21,99 @@ const battery      = quickapp2weixin["@system.battery"]
 const wifi      = quickapp2weixin["@system.wifi"]
 const bluetooth      = quickapp2weixin["@system.bluetooth"]
 const zip      = quickapp2weixin["@system.zip"]
+const media      = quickapp2weixin["@system.media"]
+const image      = quickapp2weixin["@system.image"]
+
 Page({
   // getPhoneNumber (e) {
   //   console.log(e)
   // },
   onLoad: function () {
+    media.pickImage({
+      success: data => {
+        const imagePath = data.uri
+        if (imagePath && imagePath.length > 0) {
+          image.compressImage({
+           
+            uri: 
+              imagePath,
+            
+            success: function(res) {
+              console.log(res)
+            },
+            fail: function(data, code) {
+              console.log('preview fail, code = ${code}')
+            }
+          })
+         
+        }
+      },
+      fail: function(data, code) {
+        console.log(`选择图片失败, 错误码：${code}`)
+      }
+    })
+    // media.pickFile({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // media.pickVideos({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // media.pickVideo({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // media.pickImages({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // const CameraContext =  wx.createCameraContext()
+    // CameraContext.takePhoto({
+    //   success:res=>{
+    //     console.log(res)
+    //   }
+    // })
+    // media.takePhoto({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // media.takeVideo({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    // media.pickImage({
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
     // bluetooth.openAdapter({
     //   success: function() {
     //     console.log('success')
@@ -293,36 +381,36 @@ Page({
     //     console.log(res)
     //   }
     // })
-    file.mkdir({
-      uri: 'http://usr/user/c.zip',
-      success: function(data) {
-        console.log(data)
-      },
-      fail: function(data) {
-        console.log(data)
-      }
-    })
-    const FileSystemManager  = wx.getFileSystemManager()
-    FileSystemManager.unzip({
-      zipFilePath: 'http://usr/user/c.zip',
-      targetPath: 'http://usr/user',
-      success:res=>{
-        console.log(res)
-      },fail:res=>{
-        console.log(res)
-      }
-    })
-    // console.log(wx.env.USER_DATA_PATH)
-    zip.decompress({
-      srcUri: 'internal://user/c.zip',
-      dstUri: 'http://usr/user/',
-      success: function() {
-        console.log(`handling success`)
-      },
-      fail: function(data, code) {
-        console.log(`handling fail, code = ${code}`)
-      }
-    })
+    // file.mkdir({
+    //   uri: 'http://usr/user/c.zip',
+    //   success: function(data) {
+    //     console.log(data)
+    //   },
+    //   fail: function(data) {
+    //     console.log(data)
+    //   }
+    // })
+    // const FileSystemManager  = wx.getFileSystemManager()
+    // FileSystemManager.unzip({
+    //   zipFilePath: 'http://usr/user/c.zip',
+    //   targetPath: 'http://usr/user',
+    //   success:res=>{
+    //     console.log(res)
+    //   },fail:res=>{
+    //     console.log(res)
+    //   }
+    // })
+    // // console.log(wx.env.USER_DATA_PATH)
+    // zip.decompress({
+    //   srcUri: 'internal://user/c.zip',
+    //   dstUri: 'http://usr/user/',
+    //   success: function() {
+    //     console.log(`handling success`)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
     
     //     file.rmdir({
     //   uri: 'http://usr/user',

@@ -29,6 +29,8 @@ import system_wifi from './@system.wifi'
 import system_record from './@system.record'
 import system_bluetooth from './@system.bluetooth'
 import system_zip from './@system.zip'
+import system_media from './@system.media'
+import system_image from './@system.image'
 
 
 export default {
@@ -58,4 +60,6 @@ export default {
   '@system.record': system_record,
   '@system.bluetooth': system_bluetooth,
   '@system.zip': system_zip,
+  '@system.media': system_media,
+  '@system.image': system_image,
 }
