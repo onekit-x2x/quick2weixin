@@ -27,6 +27,8 @@ import system_brightness from './@system.brightness'
 import system_battery from './@system.battery'
 import system_wifi from './@system.wifi'
 import system_record from './@system.record'
+import system_bluetooth from './@system.bluetooth'
+import system_zip from './@system.zip'
 
 
 export default {
@@ -54,4 +56,6 @@ export default {
   '@system.battery': system_battery,
   '@system.wifi': system_wifi,
   '@system.record': system_record,
+  '@system.bluetooth': system_bluetooth,
+  '@system.zip': system_zip,
 }

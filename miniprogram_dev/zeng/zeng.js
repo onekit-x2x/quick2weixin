@@ -19,18 +19,90 @@ const device     = quickapp2weixin["@system.device"]
 const brightness      = quickapp2weixin["@system.brightness"]
 const battery      = quickapp2weixin["@system.battery"]
 const wifi      = quickapp2weixin["@system.wifi"]
+const bluetooth      = quickapp2weixin["@system.bluetooth"]
+const zip      = quickapp2weixin["@system.zip"]
 Page({
   // getPhoneNumber (e) {
   //   console.log(e)
   // },
   onLoad: function () {
+    // bluetooth.openAdapter({
+    //   success: function() {
+    //     console.log('success')
+    //   },
+    //   fail: function(data) {
+    //     console.log(data)
+    //   },
+    //   complete: function() {
+    //     console.log('complete')
+    //   }
+    // })
+
+    // bluetooth.closeAdapter({
+    //   success: function() {
+    //     console.log('success')
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   },
+    //   complete: function() {
+    //     console.log('complete')
+    //   }
+    // })
+    // bluetooth.onadapterstatechange = function(data) {
+    //   console.log(data)
+    // }
+    // bluetooth.ondevicefound  = function(data) {
+     
+    //   }
+    // bluetooth.startDevicesDiscovery({
+    //   success: function() {
+    //     console.log('success')
+    //   }
+    // })
+    // bluetooth.getDevices({
+    //   success: function(res) {
+    //   bluetooth.getConnectedDevices({
+    //     services: res.services,
+    //     success: function(data) {
+    //       console.log(data)
+    //     },
+    //     fail: function(data, code) {
+    //       console.log(`handling fail, code = ${code}`)
+    //     },
+    //     complete: function() {
+    //       console.log('complete')
+    //     }
+    //   })
+    //     console.log(res)
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   },
+    //   complete: function() {
+    //     console.log('complete')
+    //   }
+    // })
+    // bluetooth.getAdapterState({
+    //   success: function(res) {
+    //     console.log(
+    //      res
+    //     )
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   },
+    //   complete: function() {
+    //     console.log('complete')
+    //   }
+    // })
     // wx.startWifi()
     // wx.onWifiConnected(res=>{
     //   console.log(res)
     // })
-    wifi.onstatechanged = function(data) {
-      console.log(data)
-    }
+    // wifi.onstatechanged = function(data) {
+    //   console.log(data)
+    // }
     // wx.startWifi()
     // wifi.scan({
     //   success: function(res) {
@@ -221,15 +293,36 @@ Page({
     //     console.log(res)
     //   }
     // })
-    // file.mkdir({
-    //   uri: 'http://usr/user/b.txt',
-    //   success: function(data) {
-    //     console.log(data)
-    //   },
-    //   fail: function(data) {
-    //     console.log(data)
-    //   }
-    // })
+    file.mkdir({
+      uri: 'http://usr/user/c.zip',
+      success: function(data) {
+        console.log(data)
+      },
+      fail: function(data) {
+        console.log(data)
+      }
+    })
+    const FileSystemManager  = wx.getFileSystemManager()
+    FileSystemManager.unzip({
+      zipFilePath: 'http://usr/user/c.zip',
+      targetPath: 'http://usr/user',
+      success:res=>{
+        console.log(res)
+      },fail:res=>{
+        console.log(res)
+      }
+    })
+    // console.log(wx.env.USER_DATA_PATH)
+    zip.decompress({
+      srcUri: 'internal://user/c.zip',
+      dstUri: 'http://usr/user/',
+      success: function() {
+        console.log(`handling success`)
+      },
+      fail: function(data, code) {
+        console.log(`handling fail, code = ${code}`)
+      }
+    })
     
     //     file.rmdir({
     //   uri: 'http://usr/user',
