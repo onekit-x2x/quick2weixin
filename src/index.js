@@ -31,6 +31,7 @@ import system_bluetooth from './@system.bluetooth'
 import system_zip from './@system.zip'
 import system_media from './@system.media'
 import system_image from './@system.image'
+import system_audio from './@system.audio'
 
 
 export default {
@@ -62,4 +63,5 @@ export default {
   '@system.zip': system_zip,
   '@system.media': system_media,
   '@system.image': system_image,
+  '@system.audio': system_audio,
 }

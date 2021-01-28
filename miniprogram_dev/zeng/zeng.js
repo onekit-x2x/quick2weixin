@@ -23,35 +23,45 @@ const bluetooth      = quickapp2weixin["@system.bluetooth"]
 const zip      = quickapp2weixin["@system.zip"]
 const media      = quickapp2weixin["@system.media"]
 const image      = quickapp2weixin["@system.image"]
+const audio      = quickapp2weixin["@system.audio"]
 
 Page({
   // getPhoneNumber (e) {
   //   console.log(e)
   // },
   onLoad: function () {
-    media.pickImage({
-      success: data => {
-        const imagePath = data.uri
-        if (imagePath && imagePath.length > 0) {
-          image.compressImage({
+    // const InnerAudioContext =  wx.createInnerAudioContext()
+    // InnerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
+    // InnerAudioContext.play()
+    // console.log(InnerAudioContext.volume)
+    audio.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
+    audio.play()
+    console.log(audio.volume)
+
+
+    // media.pickImage({
+    //   success: data => {
+    //     const imagePath = data.uri
+    //     if (imagePath && imagePath.length > 0) {
+    //       image.compressImage({
            
-            uri: 
-              imagePath,
+    //         uri: 
+    //           imagePath,
             
-            success: function(res) {
-              console.log(res)
-            },
-            fail: function(data, code) {
-              console.log('preview fail, code = ${code}')
-            }
-          })
+    //         success: function(res) {
+    //           console.log(res)
+    //         },
+    //         fail: function(data, code) {
+    //           console.log('preview fail, code = ${code}')
+    //         }
+    //       })
          
-        }
-      },
-      fail: function(data, code) {
-        console.log(`选择图片失败, 错误码：${code}`)
-      }
-    })
+    //     }
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`选择图片失败, 错误码：${code}`)
+    //   }
+    // })
     // media.pickFile({
     //   success: function(data) {
     //     console.log(data)
