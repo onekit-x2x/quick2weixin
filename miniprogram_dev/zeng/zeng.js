@@ -36,7 +36,12 @@ Page({
     // console.log(InnerAudioContext.volume)
     audio.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
     audio.play()
-    console.log(audio.volume)
+    // console.log(audio.volume)
+    // audio.stop()
+    console.log(audio.getPlayState())
+    setTimeout(() => {
+      audio.pause()
+    }, 9000)
 
 
     // media.pickImage({

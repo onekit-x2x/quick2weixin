@@ -2,47 +2,47 @@
 /* eslint-disable getter-return */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
+// import InnerAudioContext from './api/InnerAudioContext'
 
 module.exports = {
 
   play() {
     getApp().onekit_play = 'play'
-    const InnerAudioContext = wx.createInnerAudioContext()
     if (getApp().onekit_src) {
-      InnerAudioContext.src = getApp().onekit_src
+      this.inneraudioContext.src = getApp().onekit_src
     }
     if (getApp().onekit_currentTime) {
-      InnerAudioContext.currentTime = getApp().onekit_currentTime
+      this.inneraudioContext.currentTime = getApp().onekit_currentTime
     }
     if (getApp().onekit_autoplay) {
-      InnerAudioContext.autoplay = getApp().onekit_autoplay
+      this.inneraudioContext.autoplay = getApp().onekit_autoplay
     } else {
-      InnerAudioContext.autoplay = false
+      this.inneraudioContext.autoplay = false
     }
     if (getApp().onekit_loop) {
-      InnerAudioContext.loop = getApp().onekit_loop
+      this.inneraudioContext.loop = getApp().onekit_loop
     } else {
-      InnerAudioContext.loop = false
+      this.inneraudioContext.loop = false
     }
     if (getApp().onekit_volume) {
-      InnerAudioContext.volume = getApp().onekit_volume
+      this.inneraudioContext.volume = getApp().onekit_volume
     }
     if (getApp().onekit_muted) {
-      InnerAudioContext.obeyMuteSwitch = getApp().onekit_muted
+      this.inneraudioContext.obeyMuteSwitch = getApp().onekit_muted
     } else {
-      InnerAudioContext.obeyMuteSwitch = false
+      this.inneraudioContext.obeyMuteSwitch = false
     }
-    InnerAudioContext.play()
+    this.inneraudioContext.play()
   },
 
   pause() {
     getApp().onekit_play = 'pause'
-    return wx.createInnerAudioContext().pause()
+    this.inneraudioContext.pause()
   },
 
   stop() {
     getApp().onekit_play = 'stop'
-    return wx.createInnerAudioContext().stop()
+    this.inneraudioContext.stop()
   },
 
   getPlayState() {
@@ -67,12 +67,13 @@ module.exports = {
   set src(src) {
     getApp().onekit_src = src
     const InnerAudioContext = wx.createInnerAudioContext()
-    InnerAudioContext.src = src
+    this.inneraudioContext = InnerAudioContext
+    this.inneraudioContext.src = InnerAudioContext
   },
 
   set currentTime(currentTime) {
     getApp().onekit_currentTime = currentTime
-    wx.createInnerAudioContext().currentTime = currentTime
+    this.inneraudioContext.currentTime = currentTime
   },
   get currentTime() {
     if (wx.createInnerAudioContext().currentTime) {
