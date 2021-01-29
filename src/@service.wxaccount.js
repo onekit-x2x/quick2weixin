@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
+
 module.exports = {
   getType() {
     return 'APP'

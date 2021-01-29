@@ -1,23 +1,40 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
+// import PROMISE from '../node_modules/oneutil/PROMISE'
+
 module.exports = {
   getType() {
-    return 'APP'
+    return {
+      trade_type: 'APP'
+    }
   },
 
   pay(quick_object) {
     if (!quick_object) {
       return
     }
-    // const quick_perpayid = quick_object.prepayid
-    // const quick_referer = quick_object.referer
     const quick_extra = quick_object.extra
     const quick_success = quick_object.success
     const quick_fail = quick_object.fail
     const quick_cancel = quick_object.cancel
-    // /////////////////////////////////
+    // // /////////////////////////////////
+    // PROMISE((SUCCESS) => {
+    //   wx.requestPayment({
+    //     timeStamp: quick_extra.time_stamp,
+    //     nonceStr: quick_extra.nonce_str,
+    //     package: quick_extra.package_value,
+    //     paySign: quick_extra.order_sign,
+    //     signType: 'MD5',
+    //     success: () => {
+    //       const quick_res = {
+    //         prepayid: ''
+    //       }
+    //       SUCCESS(quick_res)
+    //     }
+    //   })
+    // }, quick_success, quick_fail)
     const wx_object = {
-      signType: 'MD5',
+
     }
     wx_object.timeStamp = quick_extra.timeStamp
     wx_object.nonceStr = quick_extra.nonceStr

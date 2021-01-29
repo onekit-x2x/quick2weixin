@@ -24,24 +24,109 @@ const zip      = quickapp2weixin["@system.zip"]
 const media      = quickapp2weixin["@system.media"]
 const image      = quickapp2weixin["@system.image"]
 const audio      = quickapp2weixin["@system.audio"]
+const Video      = quickapp2weixin["@hap.io.Video"]
+
+const texttoaudio      = quickapp2weixin["@service.texttoaudio"]
+
 
 Page({
+  
   // getPhoneNumber (e) {
   //   console.log(e)
   // },
   onLoad: function () {
+    texttoaudio.stop()
+    texttoaudio.speak({
+      lang: 'zh_CN',
+      content: '这是语音播报效果',
+      pitch: 1,
+      rate: 1,
+      success: function(data) {
+        console.log(data)
+       
+      },
+      fail: function(data) {
+        console.log(data)
+      }
+    })
+    
+    
+ 
+    
+    
+  //   this.innerAudioContext = wx.createInnerAudioContext();
+	//  let that = this
+	//  myPlugin.textToSpeech({   // 调用插件的方法
+  //    	lang: 'zh_CN',
+  //    	content:'语音播报测试',
+  //     	success: function (res) {
+  //         that.playAudio(res.filename);
+  //     	},
+  //    })
+  // myPlugin.textToSpeech({
+  //     lang: "zh_CN",
+  //     tts: true,
+  //     content: "一个常见的需求",
+  //     success: function(res) {
+  //       const innerAudioContext = wx.createInnerAudioContext();
+  //       innerAudioContext.src = res.filename
+  //       innerAudioContext.play()
+  //         console.log(res)   
+  //     },
+  //     fail: function(res) {
+  //         console.log("fail tts", res)
+  //     }
+  // })
+    // const video =  new Video()
+    
+    //  media.pickVideo({
+    //   success: function(data) {
+    //     console.log(data)
+         
+    //     video.getVideoInfo({
+    //   uri: data.uri,
+    //   success: function(data) {
+    //     console.log(data)
+        
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+    //   },
+    //   fail: function(data, code) {
+    //     console.log(`handling fail, code = ${code}`)
+    //   }
+    // })
+   
+    // plugin.translate({
+    //   lfrom:"en_US",
+    //   lto:"zh_CN",
+    //   content:"hello, this is the first time to test？",
+    //   success: function(res) {
+    //     if(res.retcode == 0) {
+    //       console.log(res)
+    //     } else {
+    //       console.warn("翻译失败", res)
+    //     }
+    //   },
+    //   fail: function(res) {
+    //     console.log("网络失败",res)
+    //   }
+    // })
+    // 语音
     // const InnerAudioContext =  wx.createInnerAudioContext()
     // InnerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
     // InnerAudioContext.play()
     // console.log(InnerAudioContext.volume)
-    audio.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
-    audio.play()
+    // audio.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
+    // audio.play()
     // console.log(audio.volume)
     // audio.stop()
-    console.log(audio.getPlayState())
-    setTimeout(() => {
-      audio.pause()
-    }, 9000)
+    // console.log(audio.getPlayState())
+    // setTimeout(() => {
+    //   audio.pause()
+    // }, 9000)
 
 
     // media.pickImage({

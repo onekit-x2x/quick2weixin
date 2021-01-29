@@ -55,5 +55,13 @@
     "onekit-video": "./quickapp2weixin/ui/video/video",
     "onekit-web": "./quickapp2weixin/ui/web/web"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "myPlugin": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
+  
+ 
 }
