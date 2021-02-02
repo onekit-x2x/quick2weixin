@@ -35,15 +35,36 @@ Page({
   //   console.log(e)
   // },
   onLoad: function () {
-    texttoaudio.stop()
-    texttoaudio.speak({
-      lang: 'zh_CN',
-      content: '这是语音播报效果',
-      pitch: 1,
-      rate: 1,
+    // texttoaudio.stop()
+    // texttoaudio.speak({
+    //   lang: 'zh_CN',
+    //   content: '这是语音播报效果',
+    //   pitch: 1,
+    //   rate: 1,
+    //   success: function(data) {
+    //     console.log(data)
+       
+    //   },
+    //   fail: function(data) {
+    //     console.log(data)
+    //   }
+    // })
+    
+
+  request.download({
+      url: 'http://localhost/a.html',
+      success: function(data) {
+
+        console.log(data)
+      },
+      fail: function(data, code) {
+        console.log(`handling fail, code = ${code}`)
+      }
+    })
+    request.onDownloadComplete({
+      token: '',
       success: function(data) {
         console.log(data)
-       
       },
       fail: function(data) {
         console.log(data)
@@ -452,7 +473,7 @@ Page({
     //     console.log(ret)
     //   }
     // })
-    sensor.unsubscribeCompass()
+    // sensor.unsubscribeCompass()
     // wx.startAccelerometer({
     //   interval: 'game',
     //   success:res=>console.log(res)

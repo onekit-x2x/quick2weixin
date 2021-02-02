@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
-import PROMISE from 'oneutil/PROMISE'
+import PROMISE from '../../node_modules/oneutil/PROMISE'
 
 export default class Video {
   constructor(object) {

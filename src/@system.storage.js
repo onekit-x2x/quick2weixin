@@ -133,5 +133,10 @@ module.exports = {
         }
       })
     }, quick_success, quick_fail, quick_complete)
+  },
+
+  get length() {
+    const swan_res = wx.getStorageInfoSync()
+    return swan_res.keys.length
   }
 }
