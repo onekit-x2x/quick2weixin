@@ -25,11 +25,11 @@ module.exports = {
       complete: quick_complete,
     }
     const recorderManager = wx.getRecorderManager()
-    recorderManager.start(wx_object)
+    this.recorderManager = recorderManager
+    this.recorderManager.start(wx_object)
   },
   /** record.stop */
   stop() {
-    const recorderManager = wx.getRecorderManager()
-    recorderManager.start()
+    this.recorderManager.stop()
   }
 }
