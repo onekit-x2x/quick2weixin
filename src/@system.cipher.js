@@ -3,6 +3,34 @@
 import CryptoJS from 'crypto-js'
 
 module.exports = {
+  rsa(quick_object) {
+    const quick_action = quick_object.action
+    const quick_text = quick_object.text
+    const quick_key = quick_object.key
+    const quick_transformation = quick_object.transformation || 'RSA/None/OAEPwithSHA-256andMGF1Padding'
+    const quick_success = quick_object.success
+    quick_object = null
+
+    // ///////////////////////
+    const transformations = quick_transformation.split('/')
+    const options = {
+      mode: CryptoJS.mode[transformations[2]],
+      pad: CryptoJS.pad[transformations[3]]
+    }
+
+    if (quick_action === 'encrypt') {
+      const ciphertext = CryptoJS.AES.encrypt(quick_text, quick_key, options).toString()
+      quick_success({
+        text: ciphertext
+      })
+    } else {
+      const bytes = CryptoJS.AES.decrypt(quick_text, quick_key, options)
+      const decryptedData = bytes.toString(CryptoJS.enc.Utf8)
+      quick_success({
+        text: decryptedData
+      })
+    }
+  },
   aes(quick_object) {
     const quick_action = quick_object.action
     const quick_text = quick_object.text
@@ -26,7 +54,6 @@ module.exports = {
 
     if (quick_action === 'encrypt') {
       const ciphertext = CryptoJS.AES.encrypt(quick_text, quick_key, options).toString()
-      console.log(ciphertext)
       quick_success({
         text: ciphertext
       })
