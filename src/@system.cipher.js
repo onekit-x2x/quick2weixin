@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
-import CryptoJS from 'crypto-js-fix'
+import CryptoJS from 'crypto-js'
 
 module.exports = {
   aes(quick_object) {
@@ -21,7 +21,7 @@ module.exports = {
       offset: quick_ivOffset,
       length: quick_ivLen,
       mode: CryptoJS.mode[transformations[1]],
-      padding: CryptoJS.pad[transformations[2]]
+      pad: CryptoJS.pad[transformations[2]]
     }
 
     if (quick_action === 'encrypt') {

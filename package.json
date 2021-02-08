@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "oneutil": "latest",
-    "crypto-js-fix": "4.0.1"
+    "crypto-js": "3.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",

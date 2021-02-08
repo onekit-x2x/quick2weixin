@@ -47,22 +47,22 @@ Page({
       success: data => {
         console.log(`handling success: ${data.text}`)
   
-      // cipher.aes({
-      //   action: 'decrypt',
-      //   //待解密的内容，是base64编码后的一段二进制值
-      //   text:data.text,
-      //   //base64编码后的密钥
-      //   key: 'NDM5Qjk2UjAzMEE0NzVCRjlFMkQwQkVGOFc1NkM1QkQ=',
-      //   transformation: 'AES/CBC/PKCS5Padding',
-      //   ivOffset: 0,
-      //   ivLen: 16,
-      //   success: data => {
-      //    console.log(data)
-      //   },
-      //   fail: (data) => {
-      //     console.log(data)
-      //   }
-      // })
+      cipher.aes({
+        action: 'decrypt',
+        //待解密的内容，是base64编码后的一段二进制值
+        text:data.text,
+        //base64编码后的密钥
+        key: 'NDM5Qjk2UjAzMEE0NzVCRjlFMkQwQkVGOFc1NkM1QkQ=',
+        transformation: 'AES/CBC/PKCS5Padding',
+        ivOffset: 0,
+        ivLen: 16,
+        success: data => {
+         console.log(data)
+        },
+        fail: (data) => {
+          console.log(data)
+        }
+      })
         },
         fail: (data, code) => {
           console.log(`### cipher.aes fail ### ${code}: ${data}`)
