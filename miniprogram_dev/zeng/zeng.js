@@ -35,6 +35,15 @@ Page({
   //   console.log(e)
   // },
   onLoad: function () {
+    const request =  wx.downloadFile({
+      url:'http://localhost/SVN.pdf',
+      success:res=>{
+        console.log(res)
+      }
+      })
+      request.onProgressUpdate(res=>{
+        console.log(res)
+      })
     // texttoaudio.stop()
     // texttoaudio.speak({
     //   lang: 'zh_CN',
