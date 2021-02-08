@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1611300525497, function(require, module, exports) {
+__DEFINE__(1612775800284, function(require, module, exports) {
 var __TEMP__ = require('./BOOLEAN');var BOOLEAN = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./COLOR');var COLOR = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./DATE');var DATE = __REQUIRE_DEFAULT__(__TEMP__);
@@ -19,8 +19,8 @@ var __TEMP__ = require('./URL');var URL = __REQUIRE_DEFAULT__(__TEMP__);
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });Object.defineProperty(exports, 'BOOLEAN', { enumerable: true, configurable: true, get: function() { return BOOLEAN; } });Object.defineProperty(exports, 'COLOR', { enumerable: true, configurable: true, get: function() { return COLOR; } });Object.defineProperty(exports, 'DATE', { enumerable: true, configurable: true, get: function() { return DATE; } });Object.defineProperty(exports, 'HTML', { enumerable: true, configurable: true, get: function() { return HTML; } });Object.defineProperty(exports, 'OBJECT', { enumerable: true, configurable: true, get: function() { return OBJECT; } });Object.defineProperty(exports, 'PATH', { enumerable: true, configurable: true, get: function() { return PATH; } });Object.defineProperty(exports, 'PROMISE', { enumerable: true, configurable: true, get: function() { return PROMISE; } });Object.defineProperty(exports, 'STRING', { enumerable: true, configurable: true, get: function() { return STRING; } });Object.defineProperty(exports, 'TASK', { enumerable: true, configurable: true, get: function() { return TASK; } });Object.defineProperty(exports, 'URL', { enumerable: true, configurable: true, get: function() { return URL; } });
 
 
-}, function(modId) {var map = {"./BOOLEAN":1611300525498,"./COLOR":1611300525499,"./DATE":1611300525500,"./HTML":1611300525501,"./OBJECT":1611300525502,"./PATH":1611300525503,"./PROMISE":1611300525504,"./STRING":1611300525505,"./TASK":1611300525506,"./URL":1611300525507}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525498, function(require, module, exports) {
+}, function(modId) {var map = {"./BOOLEAN":1612775800285,"./COLOR":1612775800286,"./DATE":1612775800287,"./HTML":1612775800288,"./OBJECT":1612775800289,"./PATH":1612775800290,"./PROMISE":1612775800291,"./STRING":1612775800292,"./TASK":1612775800293,"./URL":1612775800294}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1612775800285, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class BOOLEAN
 {
     static fix(obj) {
@@ -36,7 +36,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
       }
 };exports.default = BOOLEAN
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525499, function(require, module, exports) {
+__DEFINE__(1612775800286, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class COLOR {
   static rgba2str(r, g, b, a) {
     function componentToHex(c) {
@@ -235,7 +235,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = COLOR
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525500, function(require, module, exports) {
+__DEFINE__(1612775800287, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class DATE {
   static monthDays(year, month) {
     if ([1, 3, 5, 7, 8, 10, 12].indexOf(month) >= 0) {
@@ -253,7 +253,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = DATE
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525501, function(require, module, exports) {
+__DEFINE__(1612775800288, function(require, module, exports) {
 /* eslint-disable no-console */
 /* eslint-disable guard-for-in */
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class HTML {
@@ -328,7 +328,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = HTML
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525502, function(require, module, exports) {
+__DEFINE__(1612775800289, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class OBJECT {
     static assign(object1, object2) {
         if (object2 == null) {
@@ -350,7 +350,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
     }
 };exports.default = OBJECT
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525503, function(require, module, exports) {
+__DEFINE__(1612775800290, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class PATH {
   static rel2abs(currentUrl, url) {
     if (url.startsWith('/')) {
@@ -399,7 +399,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = PATH
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525504, function(require, module, exports) {
+__DEFINE__(1612775800291, function(require, module, exports) {
 /* eslint-disable camelcase */
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function (body, success, fail, complete) {
   try {
@@ -433,7 +433,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525505, function(require, module, exports) {
+__DEFINE__(1612775800292, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class STRING {
   static firstUpper(str) {
     return str.substr(0, 1).toUpperCase() + str.substr(1)
@@ -483,7 +483,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = STRING
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525506, function(require, module, exports) {
+__DEFINE__(1612775800293, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function (items, func, success) {
   const result = []
   let i = 0
@@ -500,7 +500,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611300525507, function(require, module, exports) {
+__DEFINE__(1612775800294, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class URL {
   constructor(url) {
     const p1 = url.indexOf(':')
@@ -539,6 +539,6 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = URL
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1611300525497);
+return __REQUIRE__(1612775800284);
 })()
 //# sourceMappingURL=index.js.map

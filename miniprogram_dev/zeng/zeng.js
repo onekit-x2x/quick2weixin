@@ -1,6 +1,6 @@
 import quickapp2weixin from '../quickapp2weixin/index';
-const router = quickapp2weixin["@system.router"]
 
+const router = quickapp2weixin["@system.router"]
 const configuration = quickapp2weixin["@system.configuration"]
 const prompt = quickapp2weixin["@system.prompt"]
 const webview = quickapp2weixin["@system.webview"]
@@ -25,9 +25,8 @@ const media      = quickapp2weixin["@system.media"]
 const image      = quickapp2weixin["@system.image"]
 const audio      = quickapp2weixin["@system.audio"]
 const Video      = quickapp2weixin["@hap.io.Video"]
-
 const texttoaudio      = quickapp2weixin["@service.texttoaudio"]
-
+const cipher  = quickapp2weixin["@system.cipher"]
 
 Page({
   
@@ -35,15 +34,65 @@ Page({
   //   console.log(e)
   // },
   onLoad: function () {
-    const request =  wx.downloadFile({
-      url:'http://localhost/SVN.pdf',
-      success:res=>{
-        console.log(res)
-      }
+    
+    cipher.aes({
+      action: 'encrypt',
+      //待加密的文本内容
+      text: 'hello',
+      //base64编码后的密钥
+      key: 'NDM5Qjk2UjAzMEE0NzVCRjlFMkQwQkVGOFc1NkM1QkQ=',
+      transformation: 'AES/CBC/PKCS5Padding',
+      ivOffset: 0,
+      ivLen: 16,
+      success: data => {
+        console.log(`handling success: ${data.text}`)
+  
+      // cipher.aes({
+      //   action: 'decrypt',
+      //   //待解密的内容，是base64编码后的一段二进制值
+      //   text:data.text,
+      //   //base64编码后的密钥
+      //   key: 'NDM5Qjk2UjAzMEE0NzVCRjlFMkQwQkVGOFc1NkM1QkQ=',
+      //   transformation: 'AES/CBC/PKCS5Padding',
+      //   ivOffset: 0,
+      //   ivLen: 16,
+      //   success: data => {
+      //    console.log(data)
+      //   },
+      //   fail: (data) => {
+      //     console.log(data)
+      //   }
+      // })
+        },
+        fail: (data, code) => {
+          console.log(`### cipher.aes fail ### ${code}: ${data}`)
+        }
       })
-      request.onProgressUpdate(res=>{
-        console.log(res)
-      })
+  
+      // const data = [{
+      //   id: 1
+      // }, {
+      //   id: 2
+      // }]
+  
+      // // Encrypt
+      // const ciphertext = CryptoJS.AES.encrypt('my bank password', 'key1111111').toString()
+      // console.log(ciphertext)
+  
+      // // Decrypt
+      // const bytes = CryptoJS.AES.decrypt(ciphertext, 'secret key 123')
+      // const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8))
+  
+      // console.log(decryptedData) // [{id: 1}, {id: 2}]
+    // const request =  wx.downloadFile({
+    //   url:'http://localhost/SVN.pdf',
+    //   success:res=>{
+    //     console.log(res)
+    //   }
+    //   })
+    //   request.onProgressUpdate(res=>{
+    //     console.log(res)
+    //   })
     // texttoaudio.stop()
     // texttoaudio.speak({
     //   lang: 'zh_CN',
@@ -60,25 +109,25 @@ Page({
     // })
     
 
-  request.download({
-      url: 'http://localhost/a.html',
-      success: function(data) {
+  // request.download({
+  //     url: 'http://localhost/a.html',
+  //     success: function(data) {
 
-        console.log(data)
-      },
-      fail: function(data, code) {
-        console.log(`handling fail, code = ${code}`)
-      }
-    })
-    request.onDownloadComplete({
-      token: '',
-      success: function(data) {
-        console.log(data)
-      },
-      fail: function(data) {
-        console.log(data)
-      }
-    })
+  //       console.log(data)
+  //     },
+  //     fail: function(data, code) {
+  //       console.log(`handling fail, code = ${code}`)
+  //     }
+  //   })
+  //   request.onDownloadComplete({
+  //     token: '',
+  //     success: function(data) {
+  //       console.log(data)
+  //     },
+  //     fail: function(data) {
+  //       console.log(data)
+  //     }
+  //   })
     
     
  

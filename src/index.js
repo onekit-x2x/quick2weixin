@@ -34,6 +34,7 @@ import system_image from './@system.image'
 import system_audio from './@system.audio'
 import hap_io_Video from './api/Video'
 import service_texttoaudio from './@service.texttoaudio'
+import system_cipher from './@system.cipher'
 
 export default {
   OnekitApp,
@@ -67,4 +68,5 @@ export default {
   '@system.audio': system_audio,
   '@hap.io.Video': hap_io_Video,
   '@service.texttoaudio': service_texttoaudio,
+  '@system.cipher': system_cipher,
 }
