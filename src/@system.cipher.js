@@ -39,13 +39,7 @@ module.exports = {
     } else if (quick_transformation === 'RSA/NONE/OAEPwithSHA-1andMGF1Padding'.toUpperCase()) {
       console.log('11111111111')
     } else if (quick_transformation === 'RSA/NONE/OAEPwithSHA-256andMGF1Padding'.toUpperCase()) {
-      type = 'RSA-OAEP'
-      options = {
-        md: forge.md.sha256.create(),
-        mgf1: {
-          md: forge.md.sha1.create()
-        }
-      }
+      console.log('11111111111')
     } else if (quick_transformation === 'RSA/NONE/PKCS1Padding'.toUpperCase()) {
       console.log('11111111111')
     } else {
