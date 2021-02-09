@@ -4,7 +4,9 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1612776660276, function(require, module, exports) {
+__DEFINE__(1612860185565, function(require, module, exports) {
+var __TEMP__ = require('./BASE64');var BASE64 = __REQUIRE_DEFAULT__(__TEMP__);
+var __TEMP__ = require('./BLOB');var BLOB = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./BOOLEAN');var BOOLEAN = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./COLOR');var COLOR = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./DATE');var DATE = __REQUIRE_DEFAULT__(__TEMP__);
@@ -16,11 +18,113 @@ var __TEMP__ = require('./STRING');var STRING = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./TASK');var TASK = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./URL');var URL = __REQUIRE_DEFAULT__(__TEMP__);
 
-if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });Object.defineProperty(exports, 'BOOLEAN', { enumerable: true, configurable: true, get: function() { return BOOLEAN; } });Object.defineProperty(exports, 'COLOR', { enumerable: true, configurable: true, get: function() { return COLOR; } });Object.defineProperty(exports, 'DATE', { enumerable: true, configurable: true, get: function() { return DATE; } });Object.defineProperty(exports, 'HTML', { enumerable: true, configurable: true, get: function() { return HTML; } });Object.defineProperty(exports, 'OBJECT', { enumerable: true, configurable: true, get: function() { return OBJECT; } });Object.defineProperty(exports, 'PATH', { enumerable: true, configurable: true, get: function() { return PATH; } });Object.defineProperty(exports, 'PROMISE', { enumerable: true, configurable: true, get: function() { return PROMISE; } });Object.defineProperty(exports, 'STRING', { enumerable: true, configurable: true, get: function() { return STRING; } });Object.defineProperty(exports, 'TASK', { enumerable: true, configurable: true, get: function() { return TASK; } });Object.defineProperty(exports, 'URL', { enumerable: true, configurable: true, get: function() { return URL; } });
+if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });Object.defineProperty(exports, 'BASE64', { enumerable: true, configurable: true, get: function() { return BASE64; } });Object.defineProperty(exports, 'BLOB', { enumerable: true, configurable: true, get: function() { return BLOB; } });Object.defineProperty(exports, 'BOOLEAN', { enumerable: true, configurable: true, get: function() { return BOOLEAN; } });Object.defineProperty(exports, 'COLOR', { enumerable: true, configurable: true, get: function() { return COLOR; } });Object.defineProperty(exports, 'DATE', { enumerable: true, configurable: true, get: function() { return DATE; } });Object.defineProperty(exports, 'HTML', { enumerable: true, configurable: true, get: function() { return HTML; } });Object.defineProperty(exports, 'OBJECT', { enumerable: true, configurable: true, get: function() { return OBJECT; } });Object.defineProperty(exports, 'PATH', { enumerable: true, configurable: true, get: function() { return PATH; } });Object.defineProperty(exports, 'PROMISE', { enumerable: true, configurable: true, get: function() { return PROMISE; } });Object.defineProperty(exports, 'STRING', { enumerable: true, configurable: true, get: function() { return STRING; } });Object.defineProperty(exports, 'TASK', { enumerable: true, configurable: true, get: function() { return TASK; } });Object.defineProperty(exports, 'URL', { enumerable: true, configurable: true, get: function() { return URL; } });
 
 
-}, function(modId) {var map = {"./BOOLEAN":1612776660277,"./COLOR":1612776660278,"./DATE":1612776660279,"./HTML":1612776660280,"./OBJECT":1612776660281,"./PATH":1612776660282,"./PROMISE":1612776660283,"./STRING":1612776660284,"./TASK":1612776660285,"./URL":1612776660286}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660277, function(require, module, exports) {
+
+
+
+
+
+
+
+
+
+
+
+
+}, function(modId) {var map = {"./BASE64":1612860185566,"./BLOB":1612860185567,"./BOOLEAN":1612860185568,"./COLOR":1612860185569,"./DATE":1612860185570,"./HTML":1612860185571,"./OBJECT":1612860185572,"./PATH":1612860185573,"./PROMISE":1612860185574,"./STRING":1612860185575,"./TASK":1612860185576,"./URL":1612860185577}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1612860185566, function(require, module, exports) {
+if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class BASE64{
+
+  static base64decode(e) {
+    const base64DecodeChars = new Array((-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), 62, (-1), (-1), (-1), 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, (-1), (-1), (-1), (-1), (-1), (-1), (-1), 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, (-1), (-1), (-1), (-1), (-1), (-1), 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, (-1), (-1), (-1), (-1), (-1));
+    let r, a, c, h, o, t, d;
+    for (t = e.length, o = 0, d = ''; o < t;) {
+      do r = base64DecodeChars[255 & e.charCodeAt(o++)]
+      while (o < t && r == -1);
+      if (r == -1) break;
+      do a = base64DecodeChars[255 & e.charCodeAt(o++)]
+      while (o < t && a == -1);
+      if (a == -1) break;
+      d += String.fromCharCode(r << 2 | (48 & a) >> 4)
+      do {
+        if (c = 255 & e.charCodeAt(o++), 61 == c) return d
+        c = base64DecodeChars[c]
+      } while (o < t && c == -1)
+      if (c == -1) break;
+      d += String.fromCharCode((15 & a) << 4 | (60 & c) >> 2)
+      do {
+        if (h = 255 & e.charCodeAt(o++), 61 == h) return d;
+        h = base64DecodeChars[h]
+      } while (o < t && h == -1)
+      if (h == -1) break;
+      d += String.fromCharCode((3 & c) << 6 | h)
+    }
+    return d
+  }
+};exports.default = BASE64
+
+}, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1612860185567, function(require, module, exports) {
+var __TEMP__ = require('./BASE64');var BASE64 = __REQUIRE_DEFAULT__(__TEMP__);
+if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class BLOB{
+  static blob2Base64(blob, callback) {
+    let a = new FileReader();
+    a.onload = function (e) {
+      callback(e.target.result)
+    }
+    a.readAsDataURL(blob)
+  }
+
+ static blob2string(blob, callbak) {
+    const reader = new FileReader()
+    reader.onload = () => {
+      callbak(reader.result)
+    }
+    reader.readAsText(blob)
+  }
+
+  static blob2ascii(blob, callbak) {
+    const reader = new FileReader()
+    reader.onload = () => {
+      callbak(reader.result)
+    }
+    reader.readAsText(blob, 'ascii')
+  }
+
+  static blob2binary(blob, callback) {
+    const reader = new FileReader()
+    reader.onload = () => {
+      callback(reader.result)
+    }
+    reader.readAsBinaryString(blob)
+  }
+
+  static blob2hex(blob, callback) {
+    this.blobToBase64(blob, res => {
+      let bin = BASE64.base64decode(res.replace(/[ \r\n]+$/, ""))
+      let hex = []
+      for (let i = 0; i < bin.length; ++i) {
+        let tmp = bin.charCodeAt(i).toString(16);
+        if (tmp.length === 1) tmp = "0" + tmp;
+        hex[hex.length] = tmp;
+      }
+      callback(hex.join(''))
+    })
+  }
+
+  static blob2arrbuffer(blob, callback) {
+    const reader = new FileReader()
+    reader.onload = () => {
+      callback(reader.result)
+    }
+    reader.readAsArrayBuffer(blob)
+  }
+};exports.default = BLOB
+
+}, function(modId) { var map = {"./BASE64":1612860185566}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1612860185568, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class BOOLEAN
 {
     static fix(obj) {
@@ -36,7 +140,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
       }
 };exports.default = BOOLEAN
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660278, function(require, module, exports) {
+__DEFINE__(1612860185569, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class COLOR {
   static rgba2str(r, g, b, a) {
     function componentToHex(c) {
@@ -235,7 +339,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = COLOR
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660279, function(require, module, exports) {
+__DEFINE__(1612860185570, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class DATE {
   static monthDays(year, month) {
     if ([1, 3, 5, 7, 8, 10, 12].indexOf(month) >= 0) {
@@ -253,7 +357,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = DATE
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660280, function(require, module, exports) {
+__DEFINE__(1612860185571, function(require, module, exports) {
 /* eslint-disable no-console */
 /* eslint-disable guard-for-in */
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class HTML {
@@ -328,7 +432,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = HTML
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660281, function(require, module, exports) {
+__DEFINE__(1612860185572, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class OBJECT {
     static assign(object1, object2) {
         if (object2 == null) {
@@ -350,7 +454,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
     }
 };exports.default = OBJECT
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660282, function(require, module, exports) {
+__DEFINE__(1612860185573, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class PATH {
   static rel2abs(currentUrl, url) {
     if (url.startsWith('/')) {
@@ -399,7 +503,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = PATH
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660283, function(require, module, exports) {
+__DEFINE__(1612860185574, function(require, module, exports) {
 /* eslint-disable camelcase */
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function (body, success, fail, complete) {
   try {
@@ -433,7 +537,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660284, function(require, module, exports) {
+__DEFINE__(1612860185575, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class STRING {
   static firstUpper(str) {
     return str.substr(0, 1).toUpperCase() + str.substr(1)
@@ -483,7 +587,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = STRING
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660285, function(require, module, exports) {
+__DEFINE__(1612860185576, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function (items, func, success) {
   const result = []
   let i = 0
@@ -500,7 +604,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1612776660286, function(require, module, exports) {
+__DEFINE__(1612860185577, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });class URL {
   constructor(url) {
     const p1 = url.indexOf(':')
@@ -539,6 +643,6 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };exports.default = URL
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1612776660276);
+return __REQUIRE__(1612860185565);
 })()
 //# sourceMappingURL=index.js.map

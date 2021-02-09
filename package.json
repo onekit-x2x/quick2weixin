@@ -44,7 +44,8 @@
   },
   "dependencies": {
     "oneutil": "latest",
-    "crypto-js": "3.3.0"
+    "crypto-js": "3.3.0",
+    "node-forge": "0.7.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
